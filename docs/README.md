@@ -17,7 +17,7 @@ TunesCloud is a web application based on SoundCloud built using Ruby on Rails an
 
 ## Design Docs
 
-[wireframes]: (docs/wireframes)
+wireframes[wireframes]: (docs/wireframes)
 [components]: (docs/component-hierarchy.md)
 [sample-state]: docs/sample-state.md
 [api-endpoints]: docs/api-endpoints.md
