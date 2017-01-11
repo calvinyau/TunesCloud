@@ -38,6 +38,10 @@ class SessionForm extends React.Component {
 		}
 	}
 
+  toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+  }
+
 	renderErrors() {
 		return(
 			<ul>
@@ -51,12 +55,16 @@ class SessionForm extends React.Component {
 	}
 
 	render() {
+    let form_title = this.toTitleCase(this.props.formType);
 		return (
 			<div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to BenchBnB!
+					Welcome to TunesCloud!
 					<br/>
-					Please {this.props.formType} or {this.navLink()}
+          <div className="form-title">
+            <h4>{form_title}</h4>
+          </div>
+					{/* <!-- Please {this.props.formType} or {this.navLink()} --> */}
 					{this.renderErrors()}
 					<div className="login-form">
 						<br/>
@@ -74,7 +82,7 @@ class SessionForm extends React.Component {
 								className="login-input" />
 						</label>
 						<br/>
-						<input type="submit" value="Submit" />
+						<input type="submit" value="Submit" className="login-submit"/>
 					</div>
 				</form>
 			</div>
