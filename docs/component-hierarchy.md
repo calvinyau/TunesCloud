@@ -16,7 +16,7 @@
   - ForwTrackButton
   - TrackDuration
 
-**UserContianer**
+**UserContainer**
  - Profile
  - TrackList
   - Track
@@ -35,5 +35,5 @@
 | "/sign-up" | "AuthFormContainer" |
 | "/sign-in" | "AuthFormContainer" |
 | "/home" | "HomeContainer" |
-| "/home/track/:trackId" | "TrackContainer" |
-| "/home/user/:userId" | "UserContainer" |
+| "/track/:trackId" | "TrackContainer" |
+| "/user/:userId" | "UserContainer" |
