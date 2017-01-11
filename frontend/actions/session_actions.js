@@ -15,7 +15,7 @@ export const receiveErrors = (errors) => ({
 });
 
 export const login = user => dispatch => {
-  APIUtil.login(user).then(user1 => dispatch(receiveCurrentUser(user1)),
+  APIUtil.login(user).then(user => dispatch(receiveCurrentUser(user)),
       err => dispatch(receiveErrors(err.responseJSON)));
 };
 
