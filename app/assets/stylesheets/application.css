@@ -249,3 +249,7 @@ button.new-bench-button {
 hr {
   border-bottom: 1px solid grey;
 }
+
+.site-title {
+  font-size: 26px;
+}
