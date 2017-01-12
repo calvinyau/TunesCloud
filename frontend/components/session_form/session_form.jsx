@@ -6,6 +6,7 @@ class SessionForm extends React.Component {
 		super(props);
 		this.state = { username: "", password: "" };
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.demoLogin = this.demoLogin.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -28,6 +29,15 @@ class SessionForm extends React.Component {
 		e.preventDefault();
 		const user = this.state;
 		this.props.processForm({user});
+	}
+
+	demoLogin() {
+	  this.setState({
+	    username: "test",
+	    password: "123456"
+	  });
+	  const user = this.state;
+	  this.props.login(user);
 	}
 
 	navLink() {
@@ -57,35 +67,38 @@ class SessionForm extends React.Component {
 	render() {
     let form_title = this.toTitleCase(this.props.formType);
 		return (
-			<div className="login-form-container">
-				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to TunesCloud!
-					<br/>
-          <div className="form-title">
-            <h4>{form_title}</h4>
-          </div>
-					{/* <!-- Please {this.props.formType} or {this.navLink()} --> */}
-					{this.renderErrors()}
-					<div className="login-form">
+      <div className="body-container">
+        <div className="login-form-container">
+					<form onSubmit={this.handleSubmit} className="login-form-box">
+						Welcome to TunesCloud!
 						<br/>
-						<label> Username:
-							<input type="text"
-								value={this.state.username}
-								onChange={this.update("username")}
-								className="login-input" />
-						</label>
-						<br/>
-						<label> Password:
-							<input type="password"
-								value={this.state.password}
-								onChange={this.update("password")}
-								className="login-input" />
-						</label>
-						<br/>
-						<input type="submit" value="Submit" className="login-submit"/>
-					</div>
-				</form>
-			</div>
+						<div className="form-title">
+							<h4>{form_title}</h4>
+						</div>
+						{/* <!-- Please {this.props.formType} or {this.navLink()} --> */}
+						{this.renderErrors()}
+						<div className="login-form">
+							<br/>
+							<label> Username:
+								<input type="text"
+									value={this.state.username}
+									onChange={this.update("username")}
+									className="login-input" />
+							</label>
+							<br/>
+							<label> Password:
+								<input type="password"
+									value={this.state.password}
+									onChange={this.update("password")}
+									className="login-input" />
+							</label>
+							<br/>
+							<input type="submit" value="Submit" className="login-submit"/>
+							<button onClick={this.demoLogin} className="demo-button">Demo Login</button>
+						</div>
+					</form>
+        </div>
+      </div>
 		);
 	}
 
