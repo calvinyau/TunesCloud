@@ -25,7 +25,7 @@ class NavigationBar extends React.Component {
         <button className="header-button" onClick={this.props.logout}>Log Out</button>
       </div>) :
       (<nav className="login-signup">
-        <button className="demo-button" onClick={this.demoLogin}>Demo Login</button>
+        <button className="login-signup-button demo-button" onClick={this.demoLogin}>Demo Login</button>
         <Link to="/login" activeClassName="current" className="login-signup-button button">Login</Link>
         &nbsp;or&nbsp;
         <Link to="/signup" activeClassName="current" className="login-signup-button button">Sign up!</Link>

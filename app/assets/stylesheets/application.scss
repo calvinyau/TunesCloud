@@ -260,15 +260,15 @@ hr {
 }
 
 .login-signup {
-  padding: 10px;
   margin-right: 5%;
+  padding: 5px;
 }
 
 .login-signup-button {
   padding: 5px 10px;
   border: 2px solid $white;
   border-radius: 5px;
-  height: 100%;
+  margin: auto 5px;
 }
 
 .demo-button {
@@ -303,4 +303,5 @@ hr {
   margin: 0 5%;
   background-image: url(concert.jpg);
   background-size: cover;
+  border: 1px solid $light-gray;
 }
