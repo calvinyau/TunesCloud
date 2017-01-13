@@ -1,19 +1,16 @@
 import { connect } from 'react-redux';
-import { fetchTracks } from '../../actions/track_actions';
 import TrackIndex from './tracks_index';
+import { selectAllTracks } from '../../reducers/selectors';
 
 
-const mapStateToProps = () => ({
-
+const mapStateToProps = (state) => ({
+  tracks: selectAllTracks(state)
 });
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-    fetchTracks: () => dispatch(fetchTracks())
-  };
+
 };
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(TrackIndex);

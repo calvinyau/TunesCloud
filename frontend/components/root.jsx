@@ -5,6 +5,8 @@ import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import TrackIndexContainer from './tracks/tracks_index_container';
 
+import { fetchTracks } from '../actions/track_actions';
+
 const Root = ({ store }) => {
 
   const _ensureLoggedIn = (nextState, replace) => {
@@ -19,7 +21,11 @@ const Root = ({ store }) => {
     if (currentUser) {
       replace('/');
     }
-  }
+  };
+
+  const _requestTracks = (nextState, replace) => {
+    store.dispatch(fetchTracks());
+  };
 
   return (
     <Provider store={store}>
@@ -28,7 +34,8 @@ const Root = ({ store }) => {
           <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
         </Route>
-        <Route path="/home" component={TrackIndexContainer} onEnter={_ensureLoggedIn} />
+        <Route path="/home" component={TrackIndexContainer} onEnter={_requestTracks}>
+        </Route>
       </Router>
     </Provider>
   );
