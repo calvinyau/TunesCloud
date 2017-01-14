@@ -15,11 +15,11 @@ class NavigationBar extends React.Component {
         password: "123456"
       }
     };
-    this.props.login(demoUser).then(() => hashHistory.push("/home"));
+    this.props.login(demoUser).then(() => hashHistory.replace("/home"));
   }
 
   handleLogout() {
-    this.props.logout().then(() => hashHistory.push("/"));
+    this.props.logout().then(() => hashHistory.replace("/"));
   }
 
   render() {
