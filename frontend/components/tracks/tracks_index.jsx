@@ -7,10 +7,13 @@ class TracksIndex extends React.Component {
 
   render() {
     let tracks;
-    debugger;
     if (this.props.tracks) {
       tracks = this.props.tracks.map((track, index) => (
-        <li key={index}>{track.name}</li>
+        <li key={index}>
+          {track.name}
+          <br />
+          Uploaded by:{track.userId}
+        </li>
       ));
     }
 

@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 
 class NavigationBar extends React.Component {
   constructor(props) {
     super(props)
     this.demoLogin = this.demoLogin.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
   }
 
   demoLogin() {
@@ -14,7 +15,11 @@ class NavigationBar extends React.Component {
         password: "123456"
       }
     };
-    this.props.login(demoUser);
+    this.props.login(demoUser).then(() => hashHistory.push("/home"));
+  }
+
+  handleLogout() {
+    this.props.logout().then(() => hashHistory.push("/"));
   }
 
   render() {
@@ -22,7 +27,7 @@ class NavigationBar extends React.Component {
       return this.props.currentUser ? (
       <div className="header-group">
         <h2 className="header-name">Hi, {this.props.currentUser.username}!</h2>
-        <button className="header-button" onClick={this.props.logout}>Log Out</button>
+        <button className="header-button" onClick={this.handleLogout}>Log Out</button>
       </div>) :
       (<nav className="login-signup">
         <button className="login-signup-button demo-button" onClick={this.demoLogin}>Demo Login</button>
