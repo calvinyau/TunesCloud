@@ -4,7 +4,7 @@ import configureStore from './store/store.js';
 import Root from './components/root';
 import Modal from 'react-modal';
 
-import { fetchTracks } from './actions/track_actions';
+import { updateTrack } from './actions/track_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // Modal.setAppElement(document.body);
   window.store = store;
-  window.fetchTracks = fetchTracks;
+  window.updateTrack = updateTrack;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });

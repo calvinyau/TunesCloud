@@ -11,21 +11,21 @@ const TrackReducer = (state = nullTracks, action) => {
   switch(action.type) {
     case RECEIVE_TRACKS:
       const tracks = action.tracks;
-      return merge({}, {
+      return merge({}, nullTracks, {
         tracks: tracks
       });
     case RECEIVE_TRACK:
       const track = action.track;
-      return merge({}, nullTracks, {
+      return merge({}, state, {
         track: track
       });
     case RECEIVE_ERRORS:
       const err = action.errors;
-      return merge({}, nullUser, {
+      return merge({}, state, {
         errors: err
       });
     case CLEAR_ERRORS:
-      return merge({}, nullUser);
+      return nullTracks;
     default:
       return state;
   }

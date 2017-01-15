@@ -14,7 +14,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   const processForm = (formType === 'login') ? login : signup;
 
   return {
-    processForm: user => dispatch(processForm(user)).then(() => hashHistory.replace("/home")),
+    processForm: user => dispatch(processForm(user)).then(() => hashHistory.push("/home")),
     formType
   };
 };

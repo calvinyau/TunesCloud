@@ -38,7 +38,7 @@ export const createTrack = track => dispatch => (
 );
 
 export const updateTrack = track => dispatch => (
-  APIUtil.updateTrack(tracl).then(track => dispatch(receiveTrack(track)))
+  APIUtil.updateTrack(track).then(track => dispatch(receiveTrack(track)))
 );
 
 export const deleteTrack = track => dispatch => (
