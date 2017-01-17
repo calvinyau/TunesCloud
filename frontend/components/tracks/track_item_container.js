@@ -5,7 +5,8 @@ import { playTrack, pauseTrack } from '../../actions/player_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   playing: state.player.playing,
-  track: ownProps.track
+  track: ownProps.track,
+  currentTrack: state.player.track
 });
 
 const mapDispatchToProps = dispatch => ({

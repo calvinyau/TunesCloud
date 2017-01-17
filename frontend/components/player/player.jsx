@@ -16,6 +16,8 @@ class Player extends React.Component {
     this.onSeekMouseUp = this.onSeekMouseUp.bind(this);
     this.updateProgress = this.updateProgress.bind(this);
     this.togglePlay = this.togglePlay.bind(this);
+    this.getElapsed = this.getElapsed.bind(this);
+    this.getTrackDuration = this.getTrackDuration.bind(this);
   }
 
   onSeekMouseDown(e) {
@@ -32,12 +34,34 @@ class Player extends React.Component {
   }
 
   updateProgress(progress) {
-    this.setState({ played: progress.played})
+    // debugger;
+    console.log("duration: ".concat(String(this.state.duration), " | played: ", String(this.state.played)));
+    if (progress.played) {
+      this.setState({ played: progress.played});
+    }
   }
 
   togglePlay(e) {
     e.stopPropagation();
 
+
+  }
+
+  getElapsed() {
+    const fraction = this.state.played * this.state.duration;
+    const minutes = Math.floor(fraction / 60);
+    const seconds = Math.floor(fraction % 60);
+    const secString = seconds < 10 ? "0".concat(String(seconds)) : String(seconds);
+
+    return String(minutes).concat(":", secString);
+  }
+
+  getTrackDuration() {
+    const minutes = Math.floor(this.state.duration / 60);
+    const seconds = Math.floor(this.state.duration % 60);
+    const secString = seconds < 10 ? "0".concat(String(seconds)) : String(seconds);
+
+    return String(minutes).concat(":", secString);
   }
 
   render() {
@@ -64,7 +88,7 @@ class Player extends React.Component {
             onProgress={this.updateProgress}
             onDuration={duration => this.setState({ duration })}
             onPlay={() => this.setState({ ["playing"]: true })}
-            onPause={() => this.setState({ ["playing"]: false })}
+            onPause={() => this.setState({ ["playing"]: false})}
             onEnded={() => this.setState({ ["playing"]: false })}
           />
           <input
@@ -77,7 +101,7 @@ class Player extends React.Component {
         </div>
         <div className="current-track-details">
           <div>{this.props.track.name}</div>
-          <div>{this.state.played * this.state.duration}/{this.state.duration}</div>
+          <div>{this.getElapsed()}/{this.getTrackDuration()}</div>
         </div>
       </div>
     );

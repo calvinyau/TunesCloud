@@ -6,7 +6,9 @@ import PlayerContainer from './player/player_container';
 const App = ({children}) => (
   <div>
     <NavigationBarContainer />
-    { children }
+    <div className="content-area">
+      { children }
+    </div>
     <PlayerContainer />
   </div>
 );
