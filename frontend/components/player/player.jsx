@@ -8,7 +8,8 @@ class Player extends React.Component {
     this.state = {
       url: null,
       duration: 0,
-      played: 0
+      played: 0,
+      playing: this.props.playing
     }
     this.onSeekMouseDown = this.onSeekMouseDown.bind(this);
     this.onSeekChange = this.onSeekChange.bind(this);
@@ -50,9 +51,7 @@ class Player extends React.Component {
           <button className="play-pause-button" style={playPauseStyle}></button>
           <button className="next-button"></button>
         </div>
-        <div className="progress-bar">
-
-        </div>
+        <progress max="1" value={this.state.played}></progress>
         <div className="react-player-container">
           <ReactPlayer ref={player => {this.player = player}}
             className='react-player'
@@ -60,6 +59,10 @@ class Player extends React.Component {
             playing={this.props.playing}
             hidden={true}
             onProgress={this.onProgress}
+            onDuration={duration => this.setState({ duration })}
+            onPlay={() => this.setState({ ["playing"]: true })}
+            onPause={() => this.setState({ ["playing"]: false })}
+            onEnded={() => this.setState({ ["playing"]: false })}
           />
           <input
             type='range' min={0} max={1} step='any'
@@ -70,7 +73,8 @@ class Player extends React.Component {
           />
         </div>
         <div className="current-track-details">
-
+          <div>{this.props.track.name}</div>
+          
         </div>
       </div>
     );

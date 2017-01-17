@@ -245,6 +245,33 @@ hr {
 }
 // End Player
 
+// Track Item
+.track-item {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 0;
+}
+
+.fa-play-circle {
+  color: $orange;
+}
+
+.track-item-play-button {
+  height: 45px;
+}
+
+.track-detail-container {
+  margin: 5px 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.track-item-details {
+  margin: 5px 20px 5px 5px;
+}
+// End Track Item
+
 
 .splash-container {
   width: 100%;

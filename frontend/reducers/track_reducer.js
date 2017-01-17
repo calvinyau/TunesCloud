@@ -8,7 +8,6 @@ const nullTracks = Object.freeze({
 
 const TrackReducer = (state = nullTracks, action) => {
   Object.freeze(state);
-  console.log(action.type);
   switch(action.type) {
     case RECEIVE_TRACKS:
       const tracks = action.tracks;
