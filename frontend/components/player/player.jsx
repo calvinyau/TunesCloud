@@ -34,8 +34,6 @@ class Player extends React.Component {
   }
 
   updateProgress(progress) {
-    // debugger;
-    console.log("duration: ".concat(String(this.state.duration), " | played: ", String(this.state.played)));
     if (progress.played) {
       this.setState({ played: progress.played});
     }
@@ -43,8 +41,7 @@ class Player extends React.Component {
 
   togglePlay(e) {
     e.stopPropagation();
-
-
+    this.props.playing ? this.props.pauseTrack() : this.props.playTrack(this.props.track);
   }
 
   getElapsed() {
