@@ -5,11 +5,18 @@ class TrackItem extends React.Component {
   constructor(props) {
     super(props);
 
-    this.playTrack = this.playTrack.bind(this);
+    this.togglePlay = this.togglePlay.bind(this);
   }
 
-  playTrack() {
-    console.log("Play clicked");
+  togglePlay(e) {
+    e.stopPropagation();
+    if (this.props.playing) {
+      console.log("Pause clicked");
+      this.props.pauseTrack();
+    } else {
+      console.log("Play clicked");
+      this.props.playTrack(this.props.track);
+    }
   }
 
   render() {
@@ -23,7 +30,7 @@ class TrackItem extends React.Component {
       <div className="track-item">
         <img className="track-item-artwork" src={trackArtwork}/>
         <div className="track-detail-container">
-          <button className="track-item-play-button" onClick={this.playTrack}>
+          <button className="track-item-play-button" onClick={this.togglePlay}>
             <i className="fa fa-play-circle fa-3x"></i>
           </button>
           <div className="track-item-details">

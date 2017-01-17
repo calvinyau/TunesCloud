@@ -14,8 +14,8 @@ class Player extends React.Component {
     this.onSeekMouseDown = this.onSeekMouseDown.bind(this);
     this.onSeekChange = this.onSeekChange.bind(this);
     this.onSeekMouseUp = this.onSeekMouseUp.bind(this);
-    this.onProgress = this.onProgress.bind(this);
-
+    this.updateProgress = this.updateProgress.bind(this);
+    this.togglePlay = this.togglePlay.bind(this);
   }
 
   onSeekMouseDown(e) {
@@ -31,10 +31,13 @@ class Player extends React.Component {
     this.player.seekTo(parseFloat(e.target.value))
   }
 
-  onProgress(state) {
-    if (!this.state.seeking) {
-      // this.setState(state)
-    }
+  updateProgress(progress) {
+    this.setState({ played: progress.played})
+  }
+
+  togglePlay(e) {
+    e.stopPropagation();
+
   }
 
   render() {
@@ -48,7 +51,7 @@ class Player extends React.Component {
       <div className="playbar">
         <div className="play-controls">
           <button className="prev-button"></button>
-          <button className="play-pause-button" style={playPauseStyle}></button>
+          <button className="play-pause-button" style={playPauseStyle}  onClick={this.togglePlay}></button>
           <button className="next-button"></button>
         </div>
         <progress max="1" value={this.state.played}></progress>
@@ -58,7 +61,7 @@ class Player extends React.Component {
             url={this.props.track.track_url}
             playing={this.props.playing}
             hidden={true}
-            onProgress={this.onProgress}
+            onProgress={this.updateProgress}
             onDuration={duration => this.setState({ duration })}
             onPlay={() => this.setState({ ["playing"]: true })}
             onPause={() => this.setState({ ["playing"]: false })}
@@ -74,7 +77,7 @@ class Player extends React.Component {
         </div>
         <div className="current-track-details">
           <div>{this.props.track.name}</div>
-          
+          <div>{this.state.played * this.state.duration}/{this.state.duration}</div>
         </div>
       </div>
     );

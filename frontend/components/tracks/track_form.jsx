@@ -23,6 +23,7 @@ class TrackForm extends React.Component {
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, (error, results) => {
       if (!error) {
         this.setState({track_url: results[0].url});
+        //possibly set checkmark
       } else {
         console.log(error);
       }
@@ -34,6 +35,7 @@ class TrackForm extends React.Component {
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, (error, results) => {
       if (!error) {
         this.setState({artwork_url: results[0].url});
+        //possibly set checkmark
       } else {
         console.log(error);
       }
