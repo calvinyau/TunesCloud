@@ -26,21 +26,22 @@ class NavigationBar extends React.Component {
     const header = () => {
       return this.props.currentUser ? (
       <div className="header-group">
-        <h2 className="header-name">Hi, {this.props.currentUser.username}!</h2>
-        <button className="header-button" onClick={this.handleLogout}>Log Out</button>
+        <Link to="/upload" activeClassName="current" className="navbar-button button">Upload</Link>
+        <h2 className="navbar-user">Hi, {this.props.currentUser.username}!</h2>
+        <button className="navbar-button" onClick={this.handleLogout}>Log Out</button>
       </div>) :
       (<nav className="login-signup">
-        <button className="login-signup-button demo-button" onClick={this.demoLogin}>Demo Login</button>
-        <Link to="/login" activeClassName="current" className="login-signup-button button">Login</Link>
+        <button className="navbar-button demo-button" onClick={this.demoLogin}>Demo Login</button>
+        <Link to="/login" activeClassName="current" className="navbar-button button">Login</Link>
         &nbsp;or&nbsp;
-        <Link to="/signup" activeClassName="current" className="login-signup-button button">Sign up!</Link>
+        <Link to="/signup" activeClassName="current" className="navbar-button button">Sign up!</Link>
       </nav>);
     };
 
     return (
       <div>
         <header className="header">
-          <Link to="/" className="home-button button">TUNESCLOUD</Link>
+          <Link to="/home" className="home-button button">TUNESCLOUD</Link>
           {header()}
         </header>
       </div>

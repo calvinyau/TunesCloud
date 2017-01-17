@@ -12,13 +12,13 @@ class TrackItem extends React.Component {
     if (trackArtwork === "") {
       trackArtwork = "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484354963/headphones_vw9muh.jpg"
     }
-    
+
     return (
       <div className="track-item">
         <img className="track-item-artwork" src={trackArtwork}/>
         <div className="track-item-details">
           <span className="track-item-detail-user">
-            Uploader: {trackItem.user_id}
+            {trackItem.user.username}
           </span>
           <br />
           <span className="track-item-detail-title">

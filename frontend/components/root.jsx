@@ -4,6 +4,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import TrackIndexContainer from './tracks/tracks_index_container';
+import TrackFormContainer from './tracks/track_form_container';
 
 import { fetchTracks } from '../actions/track_actions';
 
@@ -36,6 +37,7 @@ const Root = ({ store }) => {
         </Route>
         <Route path="/home" component={App} onEnter={_ensureLoggedIn}>
           <IndexRoute component={TrackIndexContainer} onEnter={_requestTracks} />
+          <Route path="/upload" component={TrackFormContainer} onEnter={_ensureLoggedIn} />
         </Route>
       </Router>
     </Provider>

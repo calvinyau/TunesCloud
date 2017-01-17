@@ -1,4 +1,5 @@
 import * as APIUtil from '../util/track_api_util';
+import { hashHistory } from 'react-router';
 
 export const RECEIVE_TRACKS = 'RECEIVE_TRACKS';
 export const RECEIVE_TRACK = 'RECEIVE_TRACK';
@@ -34,7 +35,10 @@ export const fetchTrack = id => dispatch => (
 );
 
 export const createTrack = track => dispatch => (
-  APIUtil.createTrack(track).then(track => dispatch(receiveTrack(track)))
+  APIUtil.createTrack(track).then(track => {
+    dispatch(receiveTrack(track));
+    hashHistory.push('/home');
+  })
 );
 
 export const updateTrack = track => dispatch => (

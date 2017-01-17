@@ -32,7 +32,7 @@ class Player extends React.Component {
 
   onProgress(state) {
     if (!this.state.seeking) {
-      this.setState(state)
+      // this.setState(state)
     }
   }
 

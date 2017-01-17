@@ -17,24 +17,10 @@
 @import "base/grid.scss";
 @import "base/colors.scss";
 
-
-::-webkit-scrollbar {
-    width: 12px;
+body {
+  //  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
-
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-}
-
- body {
-   font-family: 'Roboto', sans-serif;
- }
 
 .content {
   height: 100%;
@@ -46,6 +32,10 @@ header {
 
 h1, h5 {
   margin-bottom: 0px;
+}
+
+.button {
+
 }
 
 .login-form-container {
@@ -97,6 +87,8 @@ hr {
   font-size: 26px;
 }
 
+// Navbar
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -109,6 +101,8 @@ hr {
 
 .header-group {
   margin-right: 5%;
+  display: flex;
+  flex-direction: row;
 }
 
 .login-signup {
@@ -116,10 +110,15 @@ hr {
   padding: 5px;
 }
 
-.login-signup-button {
+.navbar-button {
   padding: 5px 10px;
   border: 2px solid $white;
   border-radius: 5px;
+  margin: auto 5px;
+}
+
+.navbar-user {
+  padding: 5px 10px;
   margin: auto 5px;
 }
 
@@ -137,6 +136,8 @@ hr {
   background-color: $orange;
 }
 
+// END Navbar
+
 .body-container {
   overflow: auto;
   height: 800px;
@@ -146,7 +147,6 @@ hr {
 
 // Indexes
 .track-item-list {
-
 }
 
 .track-item-artwork {
@@ -158,9 +158,51 @@ hr {
   width: 1100px;
   margin: 0 auto;
   margin-left: 5%;
+  padding-bottom: 60px;
 }
 
 // End Indexes
+
+// Upload Form
+.new-track-container {
+  width: 100%;
+  height: 200px;
+}
+
+.new-track-form {
+  margin: 50px auto;
+  width: 450px;
+  text-align: center;
+}
+
+.new-track-button {
+  border: 2px solid $light-gray;
+  background: $orange;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.track-field {
+  margin: 10px auto;
+}
+
+.new-track-name {
+  border-bottom: 1px solid black;
+  width: 400px;
+}
+
+.upload-form-button {
+  border: 2px solid $light-gray;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.new-track-button {
+  margin-top: 10px;
+}
+// End Upload Form
 
 // Player
 .playbar {
