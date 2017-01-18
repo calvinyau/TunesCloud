@@ -6,19 +6,23 @@ class TrackShow extends React.Component {
   }
 
   render() {
-    let track;
-    let trackName;
+    let track, trackName, trackUsername, trackArtworkUrl;
+    let trackDetails;
     if (this.props.tracks) {
       // debugger;
-      const trackId = this.props.trackId;
-      track = this.props.tracks[trackId];
+      track = this.props.tracks[this.props.trackId];
       trackName = track.name;
+      trackUsername = track.user.username;
+      trackArtworkUrl = track.artwork_url;
+      debugger;
     }
 
     return (
       <div>
         <div className="show-details">
-          {trackName}
+          <div>{trackUsername}</div>
+          <div>{trackName}</div>
+          <img src={trackArtworkUrl}/>
         </div>
       </div>
     );
