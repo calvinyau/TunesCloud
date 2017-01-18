@@ -70,11 +70,13 @@ class Player extends React.Component {
     const playPauseStyle = {
       backgroundImage: playPauseImage
     }
+    const playbarDisplayStyle = this.props.track.id ? { display: "flex" } : { display: "none" }
+
 
     // to use built-in track bar, remove hidden and use controls={true}
 
     return (
-      <div className="playbar">
+      <div className="playbar" style={playbarDisplayStyle}>
         <div className="play-controls">
           <button className="prev-button"></button>
           <button className="play-pause-button" style={playPauseStyle}  onClick={this.togglePlay}></button>
