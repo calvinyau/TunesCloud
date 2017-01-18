@@ -74,10 +74,10 @@ h1, h5 {
 }
 
 .content-area {
-  width: 1150px;
+  width: 1230px;
   min-width: 800px;
   margin: 0 auto;
-  padding: 40px;
+  // padding: 40px;
   padding-bottom: 60px;
   background: white;
   min-height: 800px;
@@ -171,7 +171,7 @@ hr {
 }
 
 .navbar-user {
-  padding: 5px 10px;
+  padding: 5px 0px;
   margin: auto 5px;
 }
 
@@ -187,6 +187,21 @@ hr {
   margin-left: 25px;
   padding: 10px;
   background-color: $orange;
+}
+
+.navbar-user-container {
+  margin: 0 10px;
+}
+
+.current-user-thumbnail {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+}
+
+.profile-link {
+  display: flex;
+  flex-direction: row;
 }
 
 // END Navbar
@@ -212,6 +227,7 @@ hr {
   // margin: 0 auto;
   // margin-left: 5%;
   // padding-bottom: 60px;
+  padding: 40px;
 }
 
 // End Indexes
@@ -353,6 +369,30 @@ hr {
 // End Track Item
 
 // Track Show
+.track-show-container {
 
+}
+
+.track-show-header {
+  width: 1150px;
+  height: 500px;
+  background: $blue;
+  padding: 40px;
+}
+
+.track-show-artwork {
+  width: 350px;
+  height: 350px;
+}
+
+.track-show-details {
+  .username {
+    font-size: 18px;
+  }
+
+  .track-name {
+    font-size: 28px;
+  }
+}
 
 // End Track Show

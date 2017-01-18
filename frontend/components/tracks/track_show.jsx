@@ -14,15 +14,16 @@ class TrackShow extends React.Component {
       trackName = track.name;
       trackUsername = track.user.username;
       trackArtworkUrl = track.artwork_url;
-      debugger;
     }
 
     return (
-      <div>
-        <div className="show-details">
-          <div>{trackUsername}</div>
-          <div>{trackName}</div>
-          <img src={trackArtworkUrl}/>
+      <div className="track-show-container">
+        <div className="track-show-header">
+          <div className="track-show-details">
+            <div className="username">{trackUsername}</div>
+            <div className="track-name">{trackName}</div>
+            <img className="track-show-artwork" src={trackArtworkUrl} />
+          </div>
         </div>
       </div>
     );

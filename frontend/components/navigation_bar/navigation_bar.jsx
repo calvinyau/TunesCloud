@@ -24,11 +24,20 @@ class NavigationBar extends React.Component {
 
   render() {
     const homeLink = this.props.currentUser ? "/home" : '/';
+    const userImageUrl = this.props.currentUser.profile_photo_url ?
+      this.props.currentUser.profile_photo_url :
+      "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png";
+    const currUserId = `/users/${this.props.currentUser.id}`;
     const navElements = () => {
       return this.props.currentUser ? (
         <nav className="login-signup">
           <Link to="/upload" activeClassName="current" className="navbar-button button">Upload</Link>
-          <h2 className="navbar-user">Hi, {this.props.currentUser.username}!</h2>
+          <div className="navbar-user-container">
+            <Link to={currUserId} className='profile-link'>
+              <img className="current-user-thumbnail" src={userImageUrl} />
+              <h2 className="navbar-user">Hi, {this.props.currentUser.username}!</h2>
+            </Link>
+          </div>
           <button className="navbar-button" onClick={this.handleLogout}>Log Out</button>
         </nav>
       ) : (
