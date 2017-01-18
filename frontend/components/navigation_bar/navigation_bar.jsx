@@ -23,26 +23,30 @@ class NavigationBar extends React.Component {
   }
 
   render() {
-    const header = () => {
+    const homeLink = this.props.currentUser ? "/home" : '/';
+    const navElements = () => {
       return this.props.currentUser ? (
-      <div className="header-group">
-        <Link to="/upload" activeClassName="current" className="navbar-button button">Upload</Link>
-        <h2 className="navbar-user">Hi, {this.props.currentUser.username}!</h2>
-        <button className="navbar-button" onClick={this.handleLogout}>Log Out</button>
-      </div>) :
-      (<nav className="login-signup">
-        <button className="navbar-button demo-button" onClick={this.demoLogin}>Demo Login</button>
-        <Link to="/login" activeClassName="current" className="navbar-button button">Login</Link>
-        &nbsp;or&nbsp;
-        <Link to="/signup" activeClassName="current" className="navbar-button button">Sign up!</Link>
-      </nav>);
-    };
+        <nav className="login-signup">
+          <Link to="/upload" activeClassName="current" className="navbar-button button">Upload</Link>
+          <h2 className="navbar-user">Hi, {this.props.currentUser.username}!</h2>
+          <button className="navbar-button" onClick={this.handleLogout}>Log Out</button>
+        </nav>
+      ) : (
+        <nav className="login-signup">
+          <button className="navbar-button demo-button" onClick={this.demoLogin}>Demo Login</button>
+          <Link to="/login" activeClassName="current" className="navbar-button button">Login</Link>
+          &nbsp;or&nbsp;
+          <Link to="/signup" activeClassName="current" className="navbar-button button">Sign up!</Link>
+        </nav>);
+      };
 
     return (
-      <div>
+      <div className="top-bar">
         <header className="header">
-          <Link to="/home" className="home-button button">TUNESCLOUD</Link>
-          {header()}
+          <Link to={homeLink} className="home-button button">TUNESCLOUD</Link>
+          <div className="header-group">
+            {navElements()}
+          </div>
         </header>
       </div>
     )

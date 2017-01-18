@@ -2,6 +2,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
+import LoggedInApp from './logged_in_app';
+import Splash from './splash';
 import SessionFormContainer from './session_form/session_form_container';
 import TrackIndexContainer from './tracks/tracks_index_container';
 import TrackFormContainer from './tracks/track_form_container';
@@ -32,10 +34,11 @@ const Root = ({ store }) => {
     <Provider store={store}>
       <Router history={hashHistory}>
         <Route path="/" component={App}>
+          <IndexRoute component={Splash} />
           <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
         </Route>
-        <Route path="/home" component={App} onEnter={_ensureLoggedIn}>
+        <Route path="/home" component={LoggedInApp} onEnter={_ensureLoggedIn}>
           <IndexRoute component={TrackIndexContainer} onEnter={_requestTracks} />
           <Route path="/upload" component={TrackFormContainer} onEnter={_ensureLoggedIn} />
         </Route>

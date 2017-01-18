@@ -41,7 +41,10 @@ class Player extends React.Component {
 
   togglePlay(e) {
     e.stopPropagation();
-    this.props.playing ? this.props.pauseTrack() : this.props.playTrack(this.props.track);
+    // debugger;
+    if (this.props.track.id) {
+      this.props.playing ? this.props.pauseTrack() : this.props.playTrack(this.props.track);
+    }
   }
 
   getElapsed() {
@@ -67,6 +70,8 @@ class Player extends React.Component {
     const playPauseStyle = {
       backgroundImage: playPauseImage
     }
+
+    // to use built-in track bar, remove hidden and use controls={true}
 
     return (
       <div className="playbar">
