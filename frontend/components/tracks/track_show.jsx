@@ -20,8 +20,10 @@ class TrackShow extends React.Component {
       <div className="track-show-container">
         <div className="track-show-header">
           <div className="track-show-details">
-            <div className="username">{trackUsername}</div>
-            <div className="track-name">{trackName}</div>
+            <div className="text-details">
+              <div className="username">{trackUsername}</div>
+              <div className="track-name">{trackName}</div>
+            </div>
             <img className="track-show-artwork" src={trackArtworkUrl} />
           </div>
         </div>

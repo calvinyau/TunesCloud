@@ -137,6 +137,17 @@ hr {
 .top-bar {
   width: 100%;
   background: $gray;
+  // position: fixed;
+}
+
+.top-bar button:hover {
+  color: $lighter-gray;
+  border: 2px solid $orange;
+}
+
+.top-bar .button:hover {
+  color: $lighter-gray;
+  border: 2px solid $orange;
 }
 
 .header {
@@ -165,7 +176,7 @@ hr {
 
 .navbar-button {
   padding: 5px 10px;
-  border: 2px solid $white;
+  border: 1px solid $white;
   border-radius: 5px;
   margin: auto 5px;
 }
@@ -193,10 +204,16 @@ hr {
   margin: 0 10px;
 }
 
+.navbar-user-container:hover {
+  color: $orange;
+}
+
 .current-user-thumbnail {
   width: 30px;
   height: 30px;
   margin: 0 5px;
+  border: 1px solid $orange;
+  border-radius: 5px;
 }
 
 .profile-link {
@@ -375,17 +392,25 @@ hr {
 
 .track-show-header {
   width: 1150px;
-  height: 500px;
+  height: 340px;
   background: $blue;
   padding: 40px;
+  padding-top: 25px;
 }
 
 .track-show-artwork {
   width: 350px;
   height: 350px;
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  border: 1px solid $light-gray;
 }
 
 .track-show-details {
+  .text-details {
+  }
+
   .username {
     font-size: 18px;
   }
