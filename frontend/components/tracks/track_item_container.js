@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import TrackItem from './track_item';
-import { fetchSong } from '../../actions/track_actions';
+import { fetchTrack } from '../../actions/track_actions';
 import { playTrack, pauseTrack } from '../../actions/player_actions';
 
 const mapStateToProps = (state, ownProps) => ({

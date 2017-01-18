@@ -7,6 +7,7 @@ import Splash from './splash';
 import SessionFormContainer from './session_form/session_form_container';
 import TrackIndexContainer from './tracks/tracks_index_container';
 import TrackFormContainer from './tracks/track_form_container';
+import TrackShowContainer from './tracks/track_show_container';
 
 import { fetchTracks } from '../actions/track_actions';
 
@@ -22,7 +23,7 @@ const Root = ({ store }) => {
   const _redirectIfLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (currentUser) {
-      replace('/');
+      replace('/home');
     }
   };
 
@@ -33,7 +34,7 @@ const Root = ({ store }) => {
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
-        <Route path="/" component={App}>
+        <Route path="/" component={App} onEnter={_redirectIfLoggedIn}>
           <IndexRoute component={Splash} />
           <Route path="/login" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
           <Route path="/signup" component={SessionFormContainer} onEnter={_redirectIfLoggedIn} />
@@ -41,6 +42,7 @@ const Root = ({ store }) => {
         <Route path="/home" component={LoggedInApp} onEnter={_ensureLoggedIn}>
           <IndexRoute component={TrackIndexContainer} onEnter={_requestTracks} />
           <Route path="/upload" component={TrackFormContainer} onEnter={_ensureLoggedIn} />
+          <Route path="/tracks/:id" component={TrackShowContainer} onEnter={_requestTracks} />
         </Route>
       </Router>
     </Provider>
