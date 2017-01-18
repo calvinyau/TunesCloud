@@ -77,35 +77,40 @@ class Player extends React.Component {
 
     return (
       <div className="playbar" style={playbarDisplayStyle}>
-        <div className="play-controls">
-          <button className="prev-button"></button>
-          <button className="play-pause-button" style={playPauseStyle}  onClick={this.togglePlay}></button>
-          <button className="next-button"></button>
-        </div>
-        <progress max="1" value={this.state.played}></progress>
-        <div className="react-player-container">
-          <ReactPlayer ref={player => {this.player = player}}
-            className='react-player'
-            url={this.props.track.track_url}
-            playing={this.props.playing}
-            hidden={true}
-            onProgress={this.updateProgress}
-            onDuration={duration => this.setState({ duration })}
-            onPlay={() => this.setState({ ["playing"]: true })}
-            onPause={() => this.setState({ ["playing"]: false})}
-            onEnded={() => this.setState({ ["playing"]: false })}
-          />
-          <input
-            type='range' min={0} max={1} step='any'
-            value={this.state.played}
-            onMouseDown={this.onSeekMouseDown}
-            onChange={this.onSeekChange}
-            onMouseUp={this.onSeekMouseUp}
-          />
-        </div>
-        <div className="current-track-details">
-          <div>{this.props.track.name}</div>
+        <div className="playbar-elements-container">
+          <div className="play-controls">
+            <button className="prev-button"></button>
+            <button className="play-pause-button" style={playPauseStyle}  onClick={this.togglePlay}></button>
+            <button className="next-button"></button>
+          </div>
+          {/*<progress max="1" value={this.state.played}></progress>*/}
+          <div className="react-player-container">
+            <input
+              className="seek-progress-bar"
+              type='range' min={0} max={1} step='any'
+              value={this.state.played}
+              onMouseDown={this.onSeekMouseDown}
+              onChange={this.onSeekChange}
+              onMouseUp={this.onSeekMouseUp}
+              />
+            <ReactPlayer ref={player => {this.player = player}}
+              className='react-player'
+              url={this.props.track.track_url}
+              playing={this.props.playing}
+              hidden={true}
+              width={0}
+              height={0}
+              onProgress={this.updateProgress}
+              onDuration={duration => this.setState({ duration })}
+              onPlay={() => this.setState({ ["playing"]: true })}
+              onPause={() => this.setState({ ["playing"]: false})}
+              onEnded={() => this.setState({ ["playing"]: false })}
+              />
+          </div>
           <div>{this.getElapsed()}/{this.getTrackDuration()}</div>
+          <div className="current-track-details">
+            <div>{this.props.track.name}</div>
+          </div>
         </div>
       </div>
     );

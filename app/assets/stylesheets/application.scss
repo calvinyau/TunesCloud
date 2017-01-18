@@ -44,10 +44,10 @@ h1, h5 {
 }
 
 .content-area {
-  width: 1180px;
+  width: 1150px;
   min-width: 800px;
   margin: 0 auto;
-  padding: 25px;
+  padding: 40px;
   padding-bottom: 60px;
   background: white;
   min-height: 800px;
@@ -228,9 +228,18 @@ hr {
 // End Upload Form
 
 // Player
+.playbar-elements-container {
+  margin: 0 auto;
+  width: 1150px;
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .react-player-container {
-    position: relative;
-    top: 40px;
+  margin: 0 50px;
+  width: 500px;
 }
 
 .playbar {
@@ -242,6 +251,7 @@ hr {
   border-top: 1px solid $light-gray;
   z-index: 500;
   display: flex;
+  flex-direction: row;
 }
 
 .play-controls {
@@ -270,6 +280,10 @@ hr {
   height: 20px;
   background-image: url("http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484553465/next-button_mxhubs.png");
   background-size: cover
+}
+
+.seek-progress-bar {
+  width: 500px;
 }
 // End Player
 
