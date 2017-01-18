@@ -35,7 +35,7 @@ class NavigationBar extends React.Component {
         <nav className="login-signup">
           <button className="navbar-button demo-button" onClick={this.demoLogin}>Demo Login</button>
           <Link to="/login" activeClassName="current" className="navbar-button button">Login</Link>
-          &nbsp;or&nbsp;
+          <span className="or-text">&nbsp;or&nbsp;</span>
           <Link to="/signup" activeClassName="current" className="navbar-button button">Sign up!</Link>
         </nav>);
       };

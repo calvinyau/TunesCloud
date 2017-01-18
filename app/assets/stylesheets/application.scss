@@ -39,11 +39,14 @@ h1, h5 {
 //
 // }
 
+.or-text {
+  margin-top: 5px;
+}
+
 .content-area {
   width: 1180px;
   min-width: 800px;
   margin: 0 auto;
-  margin-left: 25px;
   padding: 25px;
   padding-bottom: 60px;
   background: white;
@@ -126,6 +129,8 @@ hr {
 .login-signup {
   margin-right: 25px;
   padding: 5px;
+  display: flex;
+  flex-direction: row;
 }
 
 .navbar-button {
@@ -325,7 +330,7 @@ hr {
 
 .tagline {
   z-index: 5;
-  color: white;
+  color: $orange;
   font-size: 48px;
   margin: 0 auto;
   width: 500px;
