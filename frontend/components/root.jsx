@@ -43,6 +43,7 @@ const Root = ({ store }) => {
           <IndexRoute component={TrackIndexContainer} onEnter={_requestTracks} />
           <Route path="/upload" component={TrackFormContainer} onEnter={_ensureLoggedIn} />
           <Route path="/tracks/:id" component={TrackShowContainer} onEnter={_requestTracks} />
+          <Route path="/users/:id" component={UserShowContainer} />
         </Route>
       </Router>
     </Provider>
