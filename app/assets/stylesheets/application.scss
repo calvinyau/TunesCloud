@@ -429,6 +429,10 @@ hr {
 }
 // End Track Item
 
+
+
+
+
 // Track Show
 .track-show-container {
   position: relative;
@@ -442,6 +446,11 @@ hr {
   padding-top: 25px;
 }
 
+.track-show-details {
+  display: flex;
+  flex-direction: row;
+}
+
 .track-show-artwork {
   width: 350px;
   height: 350px;
@@ -449,11 +458,6 @@ hr {
   top: 25px;
   right: 25px;
   border: 1px solid $light-gray;
-}
-
-.track-show-details {
-  display: flex;
-  flex-direction: row;
 }
 
 .track-show-details .username {
@@ -469,3 +473,34 @@ hr {
 }
 
 // End Track Show
+
+
+
+
+// User show
+.user-show-container {
+  position: relative;
+}
+
+.user-show-header {
+  width: 1150px;
+  height: 340px;
+  background: $green;
+  padding: 40px;
+  padding-top: 25px;
+}
+
+.user-show-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-show-pf-photo {
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  border: 1px solid $light-gray;
+}
+// End User show

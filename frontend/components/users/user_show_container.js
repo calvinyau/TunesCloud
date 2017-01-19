@@ -4,8 +4,9 @@ import { playTrack, pauseTrack } from '../../actions/player_actions';
 import { fetchUsers, fetchUser, deleteUser } from '../../actions/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger;
+  // debugger;
   return {
+    users: state.users.users,
     userId: ownProps.params.userId,
     playing: state.player.playing,
     currentTrack: state.player.track
