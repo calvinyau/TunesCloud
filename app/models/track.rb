@@ -15,6 +15,6 @@ class Track < ApplicationRecord
   validates :name, :track_url, :user, presence: true
 
   belongs_to :user
-  # has_many :comments
+  has_many :comments
 
 end
