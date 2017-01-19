@@ -34,3 +34,11 @@ export const deleteTrack = (id) => {
     url: `api/tracks/${id}`
   });
 };
+
+export const createComment = (data) => {
+  return $.ajax({
+    method: 'POST',
+    url: 'api/comments',
+    data
+  });
+};

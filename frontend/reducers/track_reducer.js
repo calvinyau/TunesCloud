@@ -1,4 +1,4 @@
-import { RECEIVE_TRACKS, RECEIVE_TRACK, RECEIVE_ERRORS, CLEAR_ERRORS } from '../actions/track_actions';
+import { RECEIVE_TRACKS, RECEIVE_TRACK, RECEIVE_ERRORS, CLEAR_ERRORS, RECEIVE_COMMENT } from '../actions/track_actions';
 import merge from 'lodash/merge';
 
 const nullTracks = Object.freeze({
@@ -25,6 +25,11 @@ const TrackReducer = (state = nullTracks, action) => {
       return merge({}, state, {
         errors: err
       });
+    case RECEIVE_COMMENT:
+      const comment = action.comment;
+      let newState = merge({}, state);
+      newState[comment.track_id].comments.push(comment)
+      return newState;
     case CLEAR_ERRORS:
       return nullTracks;
     default:

@@ -5,6 +5,7 @@ export const RECEIVE_TRACKS = 'RECEIVE_TRACKS';
 export const RECEIVE_TRACK = 'RECEIVE_TRACK';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
 
 
 export const receiveTracks = tracks => ({
@@ -24,6 +25,11 @@ export const receiveErrors = errors => ({
 
 export const clearErrors = () => ({
   type: CLEAR_ERRORS
+});
+
+export const receiveComment = comment => ({
+  type: RECEIVE_COMMENT,
+  comment
 });
 
 export const fetchTracks = () => dispatch => (
@@ -47,4 +53,8 @@ export const updateTrack = track => dispatch => (
 
 export const deleteTrack = track => dispatch => (
   APIUtil.deleteTrack(track).then(track => dispatch(receiveTrack(null)))
+);
+
+export const createComment = comment => dispatch => (
+  APIUtil.createComment(comment).then(comment => dispatch(receiveComment(comment)))
 );
