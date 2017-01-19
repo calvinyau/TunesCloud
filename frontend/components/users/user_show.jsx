@@ -6,7 +6,11 @@ class UserShow extends React.Component {
   }
 
   render() {
-    
+    return (
+      <div className="user_show_container">
+        Show Page for {this.props.userId}
+      </div>
+    );
   }
 }
 
