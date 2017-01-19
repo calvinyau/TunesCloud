@@ -21,6 +21,7 @@ body {
   //  font-family: 'Roboto', sans-serif;
   font-family: 'Raleway', sans-serif;
   background: $lighter-gray;
+  color: $gray;
 }
 
 .content {
@@ -391,8 +392,21 @@ hr {
   justify-content: flex-start;
 }
 
-.track-item-details {
+.track-item-detail-container {
   margin: 5px 20px 5px 5px;
+}
+
+.track-item-detail:hover {
+  color: $blue;
+}
+
+.username {
+  font-size: 14px;
+  color: $light-gray;
+}
+
+.track-name {
+
 }
 
 .track-item-artwork {

@@ -20,8 +20,9 @@ class TrackItem extends React.Component {
 
   render() {
     const trackItem = this.props.track;
-    const trackArtwork = trackItem.artwork_url === "" ? trackItem.artwork_url :
-      "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484354963/headphones_vw9muh.jpg";
+    const trackArtwork = trackItem.artwork_url === "" ?
+      "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484354963/headphones_vw9muh.jpg"
+      : trackItem.artwork_url;
     let playPauseIcon;
     if (this.props.playing) {
       playPauseIcon = this.props.track.name === this.props.currentTrack.name ? "fa fa-pause-circle fa-3x" : "fa fa-play-circle fa-3x"
@@ -37,12 +38,12 @@ class TrackItem extends React.Component {
           <button className="track-item-play-button" onClick={this.togglePlay}>
             <i className={playPauseIcon}></i>
           </button>
-          <div className="track-item-details">
-            <span className="track-item-detail-user">
+          <div className="track-item-detail-container">
+            <span className="track-item-detail username">
               {trackItem.user.username}
             </span>
             <br />
-            <span className="track-item-detail-title">
+            <span className="track-item-detail track-name">
               <Link to={trackUrl}>
                 {trackItem.name}
               </Link>
