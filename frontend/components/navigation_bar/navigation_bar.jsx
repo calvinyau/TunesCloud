@@ -11,7 +11,7 @@ class NavigationBar extends React.Component {
   demoLogin() {
     const demoUser = {
       user: {
-        username: "Guest",
+        username: "Demo",
         password: "123456"
       }
     };
