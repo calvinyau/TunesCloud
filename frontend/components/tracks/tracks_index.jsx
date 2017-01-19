@@ -21,7 +21,7 @@ class TracksIndex extends React.Component {
       <div className="track-index">
         <div className="track-user-nav">
           <h2 className="selected-index">Tracks</h2>
-          <h2><Link to="/home/users" className="index-link">Users</Link></h2>
+          {/* <h2><Link to="/home/users" className="index-link">Users</Link></h2> */}
         </div>
         <ul className="track-index-list">
           {tracks}

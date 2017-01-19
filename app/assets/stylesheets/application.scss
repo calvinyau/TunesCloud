@@ -63,6 +63,13 @@ h1, h5 {
   background-size: cover;
 }
 
+.body-container {
+  overflow: auto;
+  height: 800px;
+  background-image: url("http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484688392/concert_zy1rhw.jpg");
+  background-size: cover;
+}
+
 .tagline {
   z-index: 5;
   color: $orange;
@@ -225,12 +232,11 @@ hr {
 
 // END Navbar
 
-.body-container {
-  overflow: auto;
-  height: 800px;
-  background-image: url("http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484688392/concert_zy1rhw.jpg");
-  background-size: cover;
-}
+
+
+
+
+
 
 // Indexes
 .track-item-list {
@@ -249,7 +255,15 @@ hr {
   padding: 40px;
 }
 
+.track-user-nav {
+  font-size: 30px;
+}
+
 // End Indexes
+
+
+
+
 
 // Upload Form
 .new-track-container {

@@ -3,6 +3,7 @@ import UserShow from './user_show';
 import { playTrack, pauseTrack } from '../../actions/player_actions';
 
 const mapStateToProps = (state, ownProps) => ({
+  userId: ownProps.params.id
 
 });
 

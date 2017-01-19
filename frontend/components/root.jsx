@@ -8,6 +8,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import TrackIndexContainer from './tracks/tracks_index_container';
 import TrackFormContainer from './tracks/track_form_container';
 import TrackShowContainer from './tracks/track_show_container';
+import UserShowContainer from './users/user_show_container';
 
 import { fetchTracks } from '../actions/track_actions';
 
