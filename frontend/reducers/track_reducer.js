@@ -8,6 +8,7 @@ const nullTracks = Object.freeze({
 
 const TrackReducer = (state = nullTracks, action) => {
   Object.freeze(state);
+  let newState;
   switch(action.type) {
     case RECEIVE_TRACKS:
       const tracks = action.tracks;
@@ -16,7 +17,7 @@ const TrackReducer = (state = nullTracks, action) => {
       });
     case RECEIVE_TRACK:
       const track = action.track;
-      let newState = merge({}, state, {
+      newState = merge({}, state, {
         tracks: { [track.id]: track }
       });
       return newState;
@@ -27,7 +28,7 @@ const TrackReducer = (state = nullTracks, action) => {
       });
     case RECEIVE_COMMENT:
       const comment = action.comment;
-      let newState = merge({}, state);
+      newState = merge({}, state);
       newState[comment.track_id].comments.push(comment)
       return newState;
     case CLEAR_ERRORS:

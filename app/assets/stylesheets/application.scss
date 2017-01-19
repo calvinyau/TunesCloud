@@ -152,7 +152,7 @@ hr {
 }
 
 .top-bar button:hover {
-  color: $lighter-gray;
+  color: $orange;
   border: 1px solid $orange;
 }
 
@@ -537,6 +537,16 @@ box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 
 .track-show-details .play-button {
    margin-right: 30px;
+}
+
+.comment-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.commenter-photo {
+  height: 40px;
+  width: 40px;
 }
 
 // End Track Show

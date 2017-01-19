@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import CommentFormContainer from '../comments/comment_form_container';
 
 class TrackShow extends React.Component {
   constructor(props) {
@@ -21,14 +22,17 @@ class TrackShow extends React.Component {
   }
 
   render() {
-    let track, trackName, trackUsername, trackArtworkUrl, uploaderUrl;
-    let trackDetails;
+    let track, trackName, trackUsername, trackArtworkUrl, uploaderUrl, commenter,
+      commenterPhoto;
     if (this.props.tracks) {
       track = this.props.tracks[this.props.trackId];
       trackName = track.name;
       trackUsername = track.user.username;
       trackArtworkUrl = track.artwork_url ? track.artwork_url : "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484354963/headphones_vw9muh.jpg";
       uploaderUrl = `/users/${track.user.id}`;
+      commenter = this.props.currentUser;
+      commenterPhoto = commenter.profile_photo_url ? commenter.profile_photo_url :
+        "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png";
     }
     let playPauseIcon;
     if (this.props.playing) {
@@ -55,6 +59,10 @@ class TrackShow extends React.Component {
             </div>
             <img className="track-show-artwork" src={trackArtworkUrl} />
           </div>
+        </div>
+        <div className="comment-section">
+          <img src={commenterPhoto} className="commenter-photo" />
+          <CommentFormContainer />
         </div>
       </div>
     );
