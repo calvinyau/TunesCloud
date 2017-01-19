@@ -8,8 +8,11 @@ const mapStateToProps = (state, ownProps) => {
   // debugger;
   return ({
     tracks: state.tracks.tracks,
+    // track: state.tracks.tracks[ownProps.params.id],
     currentUser: state.session.currentUser,
-    trackId: ownProps.params.id
+    trackId: ownProps.params.id,
+    playing: state.player.playing,
+    currentTrack: state.player.track
   });
 }
 

@@ -142,12 +142,12 @@ hr {
 
 .top-bar button:hover {
   color: $lighter-gray;
-  border: 2px solid $orange;
+  border: 1px solid $orange;
 }
 
-.top-bar .button:hover {
+.login-signup .button:hover {
   color: $lighter-gray;
-  border: 2px solid $orange;
+  border: 1px solid $orange;
 }
 
 .header {
@@ -359,10 +359,29 @@ hr {
 
 .fa-play-circle {
   color: $orange;
+  // background: white;
+  // border-radius: 50%;
+  // height: 0.8em;
+  // width: 0.8em;
+}
+
+.stack-3x {
+  font-size: 3em;
+  position: absolute;
+  left: 0;
+  // width: 100%;
+  text-align: center;
+}
+
+.square-background {
+  left: 5px;
+  top: 10px;
+  color: white;
 }
 
 .fa-pause-circle {
   color: $orange;
+  background: white;
 }
 
 .track-item-play-button {
@@ -387,13 +406,13 @@ hr {
 
 // Track Show
 .track-show-container {
-
+  position: relative;
 }
 
 .track-show-header {
   width: 1150px;
   height: 340px;
-  background: $blue;
+  background: $green;
   padding: 40px;
   padding-top: 25px;
 }
@@ -402,22 +421,26 @@ hr {
   width: 350px;
   height: 350px;
   position: absolute;
-  top: 70px;
-  right: 50px;
+  top: 25px;
+  right: 25px;
   border: 1px solid $light-gray;
 }
 
 .track-show-details {
-  .text-details {
-  }
+  display: flex;
+  flex-direction: row;
+}
 
-  .username {
-    font-size: 18px;
-  }
+.track-show-details .username {
+  font-size: 18px;
+}
 
-  .track-name {
-    font-size: 28px;
-  }
+.track-show-details .track-name {
+  font-size: 28px;
+}
+
+.track-show-details .play-button {
+   margin-right: 30px;
 }
 
 // End Track Show
