@@ -9,11 +9,13 @@ class TrackShow extends React.Component {
 
   togglePlay(e) {
     e.stopPropagation();
-    if (this.props.tracks[this.props.trackId] === this.props.currentTrack.id) {
+    console.log('play clicked');
+    const showTrack = this.props.tracks[this.props.trackId];
+    if (showTrack.id === this.props.currentTrack.id) {
       this.props.playing ? this.props.pauseTrack() : this.props.playTrack(this.props.tracks[this.props.trackId]);
     } else {
       this.props.pauseTrack();
-      this.props.playTrack(this.props.track);
+      this.props.playTrack(showTrack);
     }
   }
 
@@ -28,7 +30,7 @@ class TrackShow extends React.Component {
     }
     let playPauseIcon;
     if (this.props.playing) {
-      playPauseIcon = this.props.tracks[this.props.trackId].name === this.props.currentTrack.name ? "fa fa-pause-circle fa-stack-3x" : "fa fa-play-circle stack-3x"
+      playPauseIcon = this.props.tracks[this.props.trackId].name === this.props.currentTrack.name ? "fa fa-pause-circle stack-3x" : "fa fa-play-circle stack-3x"
     } else {
       playPauseIcon = "fa fa-play-circle stack-3x";
     }

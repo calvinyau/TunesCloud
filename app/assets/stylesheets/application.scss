@@ -106,6 +106,7 @@ h1, h5 {
   padding: 20px;
   background-color: rgba(51, 51, 51, 0.5);
   color: white;
+  text-align: center;
 }
 
 .login-submit {
@@ -359,10 +360,6 @@ hr {
 
 .fa-play-circle {
   color: $orange;
-  // background: white;
-  // border-radius: 50%;
-  // height: 0.8em;
-  // width: 0.8em;
 }
 
 .stack-3x {
@@ -381,7 +378,6 @@ hr {
 
 .fa-pause-circle {
   color: $orange;
-  background: white;
 }
 
 .track-item-play-button {

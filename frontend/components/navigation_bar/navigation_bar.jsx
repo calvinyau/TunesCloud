@@ -24,10 +24,13 @@ class NavigationBar extends React.Component {
 
   render() {
     const homeLink = this.props.currentUser ? "/home" : '/';
-    const userImageUrl = this.props.currentUser.profile_photo_url ?
-      this.props.currentUser.profile_photo_url :
-      "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png";
-    const currUserId = `/users/${this.props.currentUser.id}`;
+    let userImageUrl, currUserId;
+    if (this.props.currentUser) {
+      userImageUrl = this.props.currentUser.profile_photo_url ?
+        this.props.currentUser.profile_photo_url :
+        "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png";
+      currUserId = `/users/${this.props.currentUser.id}`;
+    }
     const navElements = () => {
       return this.props.currentUser ? (
         <nav className="login-signup">
