@@ -29,14 +29,23 @@ track9 = Track.create({name: "Frank Ocean - Thinking About You", track_url: "htt
   artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484703806/channel_orange.jpg", user_id: 11})
 
 
+avatars = []
 
 20.times do
-  username = Faker::Name.unique.name
+  image = Faker::Avatar.image
+  avatars.push(image)
+end
+
+
+20.times do
+
+  username = Faker::StarWars.unique.character
+  sample_pic = avatars.sample
 
   user = User.create({
       username: username,
       email: Faker::Internet.email(username),
       password: "123456",
-      profile_photo_url: ""
+      profile_photo_url: sample_pic
   })
 end

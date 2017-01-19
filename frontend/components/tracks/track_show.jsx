@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 class TrackShow extends React.Component {
   constructor(props) {
@@ -20,13 +21,14 @@ class TrackShow extends React.Component {
   }
 
   render() {
-    let track, trackName, trackUsername, trackArtworkUrl;
+    let track, trackName, trackUsername, trackArtworkUrl, uploaderUrl;
     let trackDetails;
     if (this.props.tracks) {
       track = this.props.tracks[this.props.trackId];
       trackName = track.name;
       trackUsername = track.user.username;
       trackArtworkUrl = track.artwork_url ? track.artwork_url : "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484354963/headphones_vw9muh.jpg";
+      uploaderUrl = `/users/${track.user.id}`;
     }
     let playPauseIcon;
     if (this.props.playing) {
@@ -46,7 +48,9 @@ class TrackShow extends React.Component {
               </span>
             </button>
             <div className="text-details">
-              <div className="username">{trackUsername}</div>
+              <Link to={uploaderUrl}>
+                <div className="username">{trackUsername}</div>
+              </Link>
               <div className="track-name">{trackName}</div>
             </div>
             <img className="track-show-artwork" src={trackArtworkUrl} />
