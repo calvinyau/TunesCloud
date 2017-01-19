@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import CommentFormContainer from '../comments/comment_form_container';
+import CommentListContainer from '../comments/comment_list_container';
 
 class TrackShow extends React.Component {
   constructor(props) {
@@ -63,6 +64,7 @@ class TrackShow extends React.Component {
         <div className="comment-section">
           <img src={commenterPhoto} className="commenter-photo" />
           <CommentFormContainer />
+          <CommentListContainer track={this.props.tracks[this.props.trackId]}/>
         </div>
       </div>
     );

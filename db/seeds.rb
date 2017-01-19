@@ -29,6 +29,8 @@ track9 = Track.create({name: "Frank Ocean - Thinking About You", track_url: "htt
   artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484703806/channel_orange.jpg", user_id: 11})
 
 
+
+
 avatars = []
 
 20.times do
@@ -48,4 +50,16 @@ end
       password: "123456",
       profile_photo_url: sample_pic
   })
+end
+
+comments = []
+100.times do
+  quote = Faker::StarWars.quote
+  comments.push(quote)
+
+  comment = Comment.create({
+      body: quote,
+      user_id: Random.rand(19) + 1,
+      track_id: Random.rand(9) + 1
+    })
 end
