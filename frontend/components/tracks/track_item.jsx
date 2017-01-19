@@ -30,6 +30,7 @@ class TrackItem extends React.Component {
       playPauseIcon = "fa fa-play-circle fa-3x";
     }
     const trackUrl = `/tracks/${this.props.track.id}`;
+    const uploaderUrl = `users/${this.props.track.user_id}`;
 
     return (
       <div className="track-item">
@@ -40,7 +41,9 @@ class TrackItem extends React.Component {
           </button>
           <div className="track-item-detail-container">
             <span className="track-item-detail username">
-              {trackItem.user.username}
+              <Link to={uploaderUrl}>
+                {trackItem.user.username}
+              </Link>
             </span>
             <br />
             <span className="track-item-detail track-name">

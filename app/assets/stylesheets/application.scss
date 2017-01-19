@@ -80,6 +80,7 @@ h1, h5 {
   height: 300px;
   position: relative;
   top: 25%;
+  text-align: center;
 }
 
 .content-area {
@@ -122,7 +123,7 @@ h1, h5 {
   border: 2px solid gray;
   border-radius: 5px;
   text-align: center;
-  background: orange;
+  background: $orange;
   padding: 5px;
 }
 
@@ -156,7 +157,8 @@ hr {
 }
 
 .login-signup .button:hover {
-  color: $lighter-gray;
+  // color: $lighter-gray;
+  color: $orange;
   border: 1px solid $orange;
 }
 
@@ -197,10 +199,10 @@ hr {
 }
 
 .demo-button {
-  border: 2px solid gray;
+  border: 1px solid $white;
   border-radius: 5px;
   text-align: center;
-  background: orange;
+  background: $orange;
   padding: 5px 10px;
 }
 
@@ -365,6 +367,71 @@ hr {
 .seek-progress-bar {
   width: 500px;
 }
+
+// Input range
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 15px;
+  flex: 1;
+  background: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+
+/* Webkit */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  animation-duration: 0.2s;
+  transition: all ease 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: $orange;
+  transition: height 0.2s;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  animation-duration: 0.2s;
+  transition: all ease 0.2s;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #52B6D2;
+  height: 4px;
+}
+
+/* Firefox */
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #52B6D2;
+  transition: height 0.2s;
+}
+input[type=range]::-moz-range-thumb {
+box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -7px;
+}
+
+// End input range
+
 // End Player
 
 // Track Item
