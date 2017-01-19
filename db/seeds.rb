@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-guestAccount = User.create({username: "Guest", password: "123456", email:"guest@guest.com", profile_photo_url: ""})
+guestAccount = User.create({username: "Demo", password: "123456", email:"demo@demo.com", profile_photo_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png"})
 
 track0 = Track.create({name: "Daft Punk - Give Life Back to Music", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1484788011/Give_Life_Back_to_Music_rwqv9n.mp3",
    artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484788177/Random_Access_Memories_izpzws.jpg", user_id: 2})
