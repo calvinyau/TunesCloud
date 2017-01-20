@@ -7,14 +7,22 @@ class CommentList extends React.Component {
     super(props);
   }
 
+
   render() {
+    const list = () => {
+      return (
+        this.props.comments.map((comment) =>
+            <li>
+              <CommentItem body={comment.body} commenter={comment.user_id}/>
+            </li>
+          )
+      );
+    }
+
+    debugger;
     return (
       <ul>
-        this.props.comments.map((comment) => {
-          <li>
-            <CommentItem body={comment.body} commenter={comment.user_id}/>
-          </li>
-        });
+        {list}
       </ul>
     );
   }

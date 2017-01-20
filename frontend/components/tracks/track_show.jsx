@@ -63,8 +63,8 @@ class TrackShow extends React.Component {
         </div>
         <div className="comment-section">
           <img src={commenterPhoto} className="commenter-photo" />
-          <CommentFormContainer />
-          <CommentListContainer track={this.props.tracks[this.props.trackId]}/>
+          <CommentFormContainer trackId={this.props.trackId}/>
+          <CommentListContainer track={track}/>
         </div>
       </div>
     );
