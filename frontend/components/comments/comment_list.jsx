@@ -12,16 +12,19 @@ class CommentList extends React.Component {
   }
 
   render() {
-    debugger;
     const { comments, users } = this.props;
-    const list = comments.map((comment, index) => {
+    let list;
+    if (users) {
+      list = comments.map((comment, index) => {
         let commenter = users[comment.user_id];
+        // debugger;
         return (
           <li className="comment-list-item" key={index}>
             <CommentItem body={comment.body} commenter={commenter}/>
           </li>
         );
       });
+    }
 
     return (
       <ul className="comment-list">

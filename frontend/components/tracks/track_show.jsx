@@ -32,8 +32,10 @@ class TrackShow extends React.Component {
       trackArtworkUrl = track.artwork_url ? track.artwork_url : "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484354963/headphones_vw9muh.jpg";
       uploaderUrl = `/users/${track.user.id}`;
       commenter = this.props.currentUser;
-      commenterPhoto = commenter.profile_photo_url ? commenter.profile_photo_url :
-        "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png";
+      commenterPhoto = commenter ? commenter.profile_photo_url : "";
+      if (commenterPhoto === "") {
+        commenterPhoto = "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png";
+      }
     }
     let playPauseIcon;
     if (this.props.playing) {
