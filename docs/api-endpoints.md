@@ -10,8 +10,9 @@
 
 ### Users
 
-- `POST /api/user`
-- `PATCH /api/user`
+- `GET /api/users`
+- `POST /api/users`
+- `PATCH /api/users`
 
 ### Session
 
@@ -28,7 +29,4 @@
 
 ### Comments
 
-- `GET /api/track/:track_id/comments`
-- `POST /api/comment`
-- `GET /api/comment/:id`
-- `DELETE /api/comment/:id`
+- `POST /api/comments`

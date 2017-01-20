@@ -1,37 +1,53 @@
 ```js
 {
-  currentUser: {
-    id: 1,
-    username: "app-academy"
+  player: {
+    playing: false,
+    track: [Track object]
   },
-  forms: {
-    signUp: {errors: []},
-    logIn: {errors: []},
-    createNote: {errors: ["body can't be blank"]}
+
+  session {
+    currentUser: [User object]
   },
+
   tracks: {
-    1: {
-      id: 1,
-      name: "Sample State",
-      track_url: "api/track/1",
-      user_id: 1,
-      artwork_url: "asdasd"
-    }
+    tracks : {
+      1: {
+        id: 1,
+        name: "Sample State",
+        track_url: "api/track/1",
+        user_id: 1,
+        artwork_url: "artwork@example.com",
+        user: [User object],
+        created_at: [Date object],
+        updated_at: [Date object],
+        comments: [
+          0: {
+            id,
+            body: "Great track",
+            track_id,
+            user_id,
+            created_at: [Date object],
+            updated_at: [Date object]
+          },
+          1: {
+            ...
+          }
+        ]
+      }
+    },
+    errors : []
   },
-  comments: {
-    1: {
-      user_id: 1,
-      track_id: 1,
-      body: "so cool"
-    }
-  },
-  currentTrack: {
-    id: 2,
-    name: "sample_track",
-    track_url: "api/track/1",
-    user_id: 1,
-    artwork_url: "pretty-pic"
-    elapsed_time: [Date object]
+  
+  users: {
+    users: {
+      10: {
+        email: "myemail@example.com",
+        id: 10,
+        profile_photo_url: "dasda@example.com",
+        username: "Megaman"
+      }
+    },
+    errors: []
   }
 }
 ```

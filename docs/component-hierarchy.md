@@ -2,38 +2,52 @@
 
 ## Component Hierarchy
 
-**AuthFormContainer**
- - AuthForm
-
-**HomeContainer**
+**App**
  - NavigationBar
- - TrackList
-  - Track
-    - TrackDuration
- - MusicPlayer
-  - PlayButton
-  - BackTrackButton
-  - ForwTrackButton
-  - TrackDuration
 
-**UserContainer**
- - Profile
- - TrackList
-  - Track
-    - TrackDuration
+**LoggedInApp**
+ - NavigationBarContainer
+ - PlayerContainer
 
-**TrackContainer**
- - Track
-  - TrackDuration
+**NavigationBarContainer**
+ - NavigationBar
+
+**PlayerContainer**
+ - Player
+
+**SessionFormContainer**
+ - SessionForm
+
+**TrackIndexContainer**
+ - TrackIndex
+  - TrackItemContainer
+
+**TrackItemContainer**
+ - TrackItem
+
+**TrackFormContainer**
+ - TrackForm
+
+**UserShowContainer**
+ - UserShow
+
+**TrackShowContainer**
+ - TrackShow
+  - CommentFormContainer
+  - CommentListContainer
+
+**CommentFormContainer**
+ - CommentForm
+
+**CommentListContainer**
  - CommentList
-  - Comment
 
 ## Routes
 
 |Path   | Component   |
 |-------|-------------|
-| "/sign-up" | "AuthFormContainer" |
-| "/sign-in" | "AuthFormContainer" |
-| "/home" | "HomeContainer" |
+| "/sign-up" | "SessionFormContainer" |
+| "/sign-in" | "SessionFormContainer" |
+| "/home" | "LoggedInApp" |
 | "/track/:trackId" | "TrackContainer" |
 | "/user/:userId" | "UserContainer" |
