@@ -4,7 +4,6 @@ import { createComment } from '../../actions/track_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger;
   return {
     currentUser: state.session.currentUser,
     trackId: ownProps.trackId

@@ -9,6 +9,7 @@ const CommentItem = ({ body, commenter }) => {
       <img src={photo} className="comment-item-photo"/>
       <div className="comment-item-text">
         <span>{commenter.username}</span>
+        <br />
         <span>{body}</span>
       </div>
     </div>
