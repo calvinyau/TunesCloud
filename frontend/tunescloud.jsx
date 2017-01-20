@@ -8,6 +8,7 @@ import { updateTrack } from './actions/track_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
+  // window.scrollTo(0, 0);
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };
     store = configureStore(preloadedState);

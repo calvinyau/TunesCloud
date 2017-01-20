@@ -10,7 +10,7 @@ class TracksIndex extends React.Component {
   render() {
     let tracks;
     if (this.props.tracks) {
-      tracks = this.props.tracks.map((track, index) => (
+      tracks = this.props.tracks.reverse().map((track, index) => (
         <li key={index} className="index-item">
           <TrackItemContainer track={track} />
         </li>

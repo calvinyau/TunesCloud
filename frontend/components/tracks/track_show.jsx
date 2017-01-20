@@ -33,9 +33,10 @@ class TrackShow extends React.Component {
       uploaderUrl = `/users/${track.user.id}`;
       commenter = this.props.currentUser;
       commenterPhoto = commenter ? commenter.profile_photo_url : "";
-      if (commenterPhoto === "") {
-        commenterPhoto = "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png";
-      }
+      // if (!commenterPhoto || commenterPhoto === "") {
+      //   commenterPhoto = "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png";
+      // }
+      commenterPhoto = commenterPhoto || "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png";
     }
     let playPauseIcon;
     if (this.props.playing) {
@@ -43,7 +44,6 @@ class TrackShow extends React.Component {
     } else {
       playPauseIcon = "fa fa-play-circle stack-3x";
     }
-
     return (
       <div className="track-show-container">
         <div className="track-show-header">

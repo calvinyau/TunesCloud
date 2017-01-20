@@ -11,6 +11,8 @@ class CommentList extends React.Component {
     this.props.fetchUsers();
   }
 
+
+
   render() {
     const { comments, users } = this.props;
     let list;

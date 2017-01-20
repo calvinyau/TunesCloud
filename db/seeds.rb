@@ -41,7 +41,7 @@ end
 track0 = Track.create({name: "Daft Punk - Give Life Back to Music", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1484788011/Give_Life_Back_to_Music_rwqv9n.mp3",
    artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484788177/Random_Access_Memories_izpzws.jpg", user_id: 2})
 track1 = Track.create({name: "Christina Perri - Jar of Hearts", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1484470383/Christina_Perri_-_Jar_of_Hearts_kzuhyf.mp3",
-   artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484615761/zwir6mwpd8ewyos1prqj.png", user_id: 2})
+   artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484611075/jar-of-hearts-album-cover_tlydxv.png", user_id: 2})
 track2 = Track.create({name: "Justin Timberlake - Mirrors", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1484470392/Justin_Timberlake_-_Mirrors_wixzs6.mp3",
    artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484470916/Justin-Timberlake-album-cover_qopwhz.jpg", user_id: 4})
 track3 = Track.create({name: "Calvin Harris - I Need Your Love ft. Ellie Goulding", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1484470392/Calvin_Harris_-_I_Need_Your_Love_ft._Ellie_Goulding_b4gspb.mp3",
