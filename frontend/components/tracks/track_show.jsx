@@ -64,8 +64,12 @@ class TrackShow extends React.Component {
           </div>
         </div>
         <div className="comment-section">
-          <img src={commenterPhoto} className="commenter-photo" />
-          <CommentFormContainer trackId={this.props.trackId}/>
+          <div className="form-and-photo">
+            <img src={commenterPhoto} className="commenter-photo" />
+            <CommentFormContainer trackId={this.props.trackId}/>
+          </div>
+          <div className="horizontal-line"></div>
+          <h4>Comments</h4>
           <CommentListContainer track={track}/>
         </div>
       </div>

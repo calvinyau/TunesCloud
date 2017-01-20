@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import CommentList from './comment_list';
 import { fetchUsers } from '../../actions/user_actions';
-import orderBy from 'lodash/orderBy';
 
 
 const mapStateToProps = (state, ownProps) => {

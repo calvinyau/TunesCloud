@@ -541,20 +541,87 @@ box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 
 .comment-section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin: 30px;
 }
+
+.comment-form {
+  // margin: 20px;
+  width: 100%;
+}
+
+.form-and-photo {
+  border: 2px solid $light-gray;
+  width: 727px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  background: #D3D3D3;
+}
+
 
 .commenter-photo {
   height: 40px;
   width: 40px;
 }
 
-.comment-item-photo {
-  height: 30px;
-  width: 30px;
-  border: 0.5px solid $gray;
+.comment-form form {
+  position: relative;
+  top: 4px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 5px;
 }
 
+.comment-form-text {
+  width: 600px;
+  border: 2px solid $light-gray;
+  line-height: 25px;
+  border-radius: 5px;
+  background: white;
+  padding: 2px;
+}
+
+.comment-form .submit {
+  margin: 0 5px;
+  border: 2px solid $light-gray;
+  border-radius: 5px;
+  background: white;
+  padding: 2px 4px;
+}
+
+.comment-form .submit:hover {
+  border: 2px solid $gray;
+}
+
+.horizontal-line {
+  border: 1px solid $light-gray;
+  margin: 20px 0;
+}
+
+.comment-item {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+}
+
+.comment-item-photo {
+  height: 35px;
+  width: 35px;
+  border: 1px solid $gray;
+}
+.comment-item-text {
+  margin: 0 20px;
+}
+
+.comment-item-username {
+  color: $light-gray;
+}
+
+.comment-item-username:hover {
+  color: $gray;
+}
 // End Track Show
 
 

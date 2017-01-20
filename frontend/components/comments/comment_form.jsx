@@ -29,10 +29,10 @@ class CommentForm extends React.Component {
       <div className="comment-form">
         <form onSubmit={ this.handleSubmit }>
           <br/>
-          <input type="text" placeholder="Write a comment" className="comment-form-input"
+          <input type="text" placeholder="Write a comment" className="comment-form-text"
             onChange={this.update("body")} id="comment-input" />
           <br/>
-          <input type="submit"/>
+          <input type="submit" className="submit"/>
         </form>
       </div>
     );
