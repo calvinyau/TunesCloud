@@ -29,7 +29,7 @@ const TrackReducer = (state = nullTracks, action) => {
     case RECEIVE_COMMENT:
       const comment = action.comment;
       newState = merge({}, state);
-      newState[comment.track_id].comments.push(comment)
+      newState.tracks[comment.track_id].comments.push(comment)
       return newState;
     case CLEAR_ERRORS:
       return nullTracks;

@@ -21,6 +21,7 @@ class CommentForm extends React.Component {
       user_id: this.props.currentUser.id
     });
     this.props.createComment({comment});
+    $("#comment-input").val("");
   }
 
   render() {
@@ -29,7 +30,7 @@ class CommentForm extends React.Component {
         <form onSubmit={ this.handleSubmit }>
           <br/>
           <input type="text" placeholder="Write a comment" className="comment-form-input"
-            onChange={this.update("body")} />
+            onChange={this.update("body")} id="comment-input" />
           <br/>
           <input type="submit"/>
         </form>

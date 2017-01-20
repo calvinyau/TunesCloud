@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import TrackItemContainer from './track_item_container';
+import orderBy from 'lodash/orderBy';
 
 class TracksIndex extends React.Component {
   constructor(props) {
@@ -10,7 +11,8 @@ class TracksIndex extends React.Component {
   render() {
     let tracks;
     if (this.props.tracks) {
-      tracks = this.props.tracks.reverse().map((track, index) => (
+      tracks = orderBy(this.props.tracks, ['created_at'], ['desc']);
+      tracks = tracks.map((track, index) => (
         <li key={index} className="index-item">
           <TrackItemContainer track={track} />
         </li>
