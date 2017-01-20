@@ -405,7 +405,7 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -7px;
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #52B6D2;
+  background: $orange;
   height: 4px;
 }
 
@@ -416,7 +416,7 @@ input[type=range]::-moz-range-track {
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #52B6D2;
+  background: $orange;
   transition: height 0.2s;
 }
 input[type=range]::-moz-range-thumb {
