@@ -152,7 +152,7 @@ hr {
 }
 
 .top-bar button:hover {
-  color: $orange;
+  color: $light-gray;
   border: 1px solid $orange;
 }
 
@@ -547,6 +547,11 @@ box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 .commenter-photo {
   height: 40px;
   width: 40px;
+}
+
+.comment-item-photo {
+  height: 30px;
+  width: 30px;
 }
 
 // End Track Show

@@ -5,10 +5,10 @@ import CommentList from './comment_list';
 const mapStateToProps = (state, ownProps) => {
   let comments;
   comments = ownProps.track ? ownProps.track.comments : [];
-  // debugger;
   return {
     track: ownProps.track,
-    comments: comments
+    comments: comments,
+    users: state.users.users
   }
 };
 

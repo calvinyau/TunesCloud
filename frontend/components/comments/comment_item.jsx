@@ -6,7 +6,7 @@ const CommentItem = ({ body, commenter }) => {
 
   return (
     <div className="comment-item">
-      <img src="photo" className="comment-item-photo"/>
+      <img src={photo} className="comment-item-photo"/>
       <div className="comment-item-text">
         <span>{commenter.username}</span>
         <span>{body}</span>
