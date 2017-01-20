@@ -31,18 +31,26 @@ track9 = Track.create({name: "Frank Ocean - Thinking About You", track_url: "htt
 
 
 
-avatars = []
-
-20.times do
-  image = Faker::Avatar.image
-  avatars.push(image)
-end
+avatar_urls = [
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880310/Star%20Wars%20Avatars/starwars-bb-8.png",
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880310/Star%20Wars%20Avatars/starwars-boba-fett.png",
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880310/Star%20Wars%20Avatars/starwars-c-3po.png",
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880291/Star%20Wars%20Avatars/starwars-chewbacca.png",
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880291/Star%20Wars%20Avatars/starwars-darth_maul.png",
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880310/Star%20Wars%20Avatars/starwars-darth-vader.png",
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880291/Star%20Wars%20Avatars/starwars-princess_amidala.png",
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880310/Star%20Wars%20Avatars/starwars-r2-d2.png",
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880291/Star%20Wars%20Avatars/starwars-royal_guard.png",
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880310/Star%20Wars%20Avatars/starwars-stormtrooper.png",
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880291/Star%20Wars%20Avatars/starwars-the_emperor.png",
+  "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484880291/Star%20Wars%20Avatars/starwars-yoda.png"
+]
 
 
 20.times do
 
   username = Faker::StarWars.unique.character
-  sample_pic = avatars.sample
+  sample_pic = avatar_urls.sample
 
   user = User.create({
       username: username,
