@@ -14,6 +14,17 @@ TunesCloud is a music streaming web application inspired by SoundCloud. Users ca
 - Viewing user profiles
 - Viewing track profiles
 
+![login][login]
+
+![home][home]
+
+![upload][upload]
+
+
+[login]: ./docs/images/login.png
+[home]: ./docs/images/home.png
+[upload]: ./docs/images/upload.png
+
 ## Design
 
 The component hierarchy, a sample of the state, the schema, API endpoints, and initial wireframe mockups can be found here:
