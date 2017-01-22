@@ -18,7 +18,6 @@
 @import "base/colors.scss";
 
 body {
-  //  font-family: 'Roboto', sans-serif;
   font-family: 'Raleway', sans-serif;
   background: $lighter-gray;
   color: $gray;
@@ -58,16 +57,37 @@ h1, h5 {
 .splash {
   width: 100%;
   height: 800px;
-  // margin: 0 25px;
-  background-image: url("http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484688392/concert_zy1rhw.jpg");
-  background-size: cover;
-  background-position: center;
+  // background-image: url("http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484688392/concert_zy1rhw.jpg");
+  // background-size: cover;
+  // background-position: center;
+}
+
+.splash-enter {
+  border-radius: 8px;
+  border: 2px solid $white;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  width: 150px;
+  line-height: 40px;
+  background-color: $orange;
+
+  display: block;
+  margin: 0 auto;
+  margin-top: 75px;
+  width: 175px;
+}
+
+.splash-enter:hover {
+  border: 2px solid $gray;
+  color: $gray;
+  // color: transparent;
 }
 
 .body-container {
   overflow: auto;
   height: 800px;
-  background-image: url("http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484688392/concert_zy1rhw.jpg");
+  background-image: url("http://res.cloudinary.com/dsvfpq1b7/image/upload/q_auto:low/v1485088253/concert-slower_lkerjn.gif");
   background-size: cover;
 }
 
@@ -76,11 +96,11 @@ h1, h5 {
   color: $orange;
   font-size: 48px;
   margin: 0 auto;
-  width: 500px;
-  height: 300px;
-  position: relative;
+  margin-top: 175px;
+  // position: relative;
   top: 25%;
   text-align: center;
+  width: 100%;
 }
 
 .content-area {
@@ -107,8 +127,9 @@ h1, h5 {
 
 .login-input {
   margin-left: 20px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 5px;
+  line-height: 20px;
 }
 
 .login-form-box {
@@ -183,6 +204,22 @@ hr {
   // flex-direction: row;
 }
 
+.home-button {
+  width: 175px;
+  height: 25px;
+  padding: 10px;
+  background-color: $orange;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.home-logo {
+  height: 25px;
+  width: 40px;
+}
+
 .login-signup {
   // margin-right: 25px;
   padding: 5px;
@@ -212,12 +249,6 @@ hr {
 
 .demo-button:hover {
   color: $light-gray;
-}
-
-.home-button {
-  // margin-left: 25px;
-  padding: 10px;
-  background-color: $orange;
 }
 
 .navbar-user-container {

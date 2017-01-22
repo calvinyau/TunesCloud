@@ -55,11 +55,12 @@ class SessionForm extends React.Component {
 	}
 
 	render() {
-    let form_title = this.toTitleCase(this.props.formType);
+    let form_title = this.props.formType === "login" ? "Log In" : "Sign Up";
+		let form_welcome = this.props.formType === "login" ? "Welcome Back!" : "Welcome to TunesCloud!";
 		return (
       <div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to TunesCloud!
+					{form_welcome}
 					<br/>
 					<div className="form-title">
 						<h4>{form_title}</h4>

@@ -55,7 +55,12 @@ class NavigationBar extends React.Component {
     return (
       <div className="top-bar">
         <header className="header">
-          <Link to={homeLink} className="home-button button">TUNESCLOUD</Link>
+          <Link to={homeLink} className="button">
+            <div className="home-button">
+              <img className="home-logo" src="http://res.cloudinary.com/dsvfpq1b7/image/upload/v1485057712/tunescloud_logo_white_orjmez.png"/>
+              <span classname="home-title">TUNESCLOUD</span>
+            </div>
+          </Link>
           <div className="header-group">
             {navElements()}
           </div>

@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Splash = (store) => (
   <div className="splash">
     <div className="tagline">
-      <span>Tune Into the Sound</span>
+      <span>Cirrusly good music.</span>
     </div>
+    <button className="splash-enter"><Link to="/login">Enter the Cloud</Link></button>
   </div>
 );
 
