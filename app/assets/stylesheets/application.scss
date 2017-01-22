@@ -520,7 +520,7 @@ box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   margin: 5px 20px 5px 5px;
 }
 
-.track-item-detail:hover {
+.track-name:hover {
   color: $blue;
 }
 
@@ -529,8 +529,8 @@ box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   color: $light-gray;
 }
 
-.track-name {
-
+.username:hover {
+  color: $green;
 }
 
 .track-item-artwork {
@@ -553,11 +553,33 @@ box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   background: $green;
   padding: 40px;
   padding-top: 25px;
+
+  background: -webkit-linear-gradient(left top, $green, $blue); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, $green, $blue); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, $green, $blue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, $green, $blue); /* Standard syntax */
+
 }
 
 .track-show-details {
   display: flex;
   flex-direction: row;
+}
+
+.track-show-details .username {
+  color: white;
+}
+
+.track-show-details .track-name {
+  color: white;
+}
+
+.track-show-details .username:hover {
+  color: $light-gray;
+}
+
+.track-show-details .track-name:hover {
+  color: $lighter-gray;
 }
 
 .track-show-artwork {
