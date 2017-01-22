@@ -97,7 +97,7 @@ track21 = Track.create({name: "Daft Punk - Give Life Back to Music", track_url: 
 
   comment = Comment.create({
       body: quote,
-      user_id: Random.rand(20),
-      track_id: Random.rand(21)
+      user_id: Random.rand(27),
+      track_id: Random.rand(22)
     })
 end
