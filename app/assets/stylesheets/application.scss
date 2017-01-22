@@ -151,7 +151,11 @@ hr {
   // position: fixed;
 }
 
-.top-bar button:hover {
+// .top-bar button:hover {
+//   color: $orange;
+//   border: 1px solid $orange;
+// }
+.logout:hover {
   color: $orange;
   border: 1px solid $orange;
 }
@@ -204,6 +208,10 @@ hr {
   text-align: center;
   background: $orange;
   padding: 5px 10px;
+}
+
+.demo-button:hover {
+  color: $light-gray;
 }
 
 .home-button {

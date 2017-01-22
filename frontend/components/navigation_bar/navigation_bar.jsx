@@ -41,11 +41,11 @@ class NavigationBar extends React.Component {
               <h2 className="navbar-user">Hi, {this.props.currentUser.username}!</h2>
             </Link>
           </div>
-          <button className="navbar-button" onClick={this.handleLogout}>Log Out</button>
+          <button className="navbar-button logout" onClick={this.handleLogout}>Log Out</button>
         </nav>
       ) : (
         <nav className="login-signup">
-          <button className="navbar-button demo-button" onClick={this.demoLogin}>Demo Login</button>
+          <button className="demo-button" onClick={this.demoLogin}>Demo Login</button>
           <Link to="/login" activeClassName="current" className="navbar-button button">Login</Link>
           <span className="or-text">&nbsp;or&nbsp;</span>
           <Link to="/signup" activeClassName="current" className="navbar-button button">Sign up!</Link>
