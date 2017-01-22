@@ -10,7 +10,6 @@ const CommentItem = ({ body, commenter }) => {
     username = commenter.username;
     commenterUrl = `/users/${commenter.id}`;
   }
-
   return (
     <div className="comment-item">
       <img src={photo} className="comment-item-photo"/>

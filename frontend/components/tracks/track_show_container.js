@@ -5,7 +5,6 @@ import { selectAllTracks } from '../../reducers/selectors';
 // import {  } from '../../actions/track_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger;
   return ({
     tracks: state.tracks.tracks,
     // track: state.tracks.tracks[ownProps.params.id],

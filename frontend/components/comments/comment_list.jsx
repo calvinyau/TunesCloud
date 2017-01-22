@@ -22,6 +22,7 @@ class CommentList extends React.Component {
       comments = orderBy(comments, ['created_at'], ['desc']);
     }
     if (users) {
+      // debugger;
       list = comments.map((comment, index) => {
         let commenter = users[comment.user_id];
         return (
