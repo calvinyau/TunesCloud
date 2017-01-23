@@ -265,9 +265,6 @@ hr {
 
 
 // Indexes
-.track-item-list {
-}
-
 .track-item-artwork {
   width: 200px;
   height: 200px;
@@ -671,6 +668,7 @@ box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 0;
 }
 
 .comment-item-username {

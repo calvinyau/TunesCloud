@@ -34,7 +34,9 @@ class TrackItem extends React.Component {
 
     return (
       <div className="track-item">
-        <img className="track-item-artwork" src={trackArtwork}/>
+        <Link to={trackUrl}>
+          <img className="track-item-artwork" src={trackArtwork}/>
+        </Link>
         <div className="track-detail-container">
           <button className="track-item-play-button" onClick={this.togglePlay}>
             <i className={playPauseIcon}></i>
