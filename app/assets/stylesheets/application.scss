@@ -57,17 +57,16 @@ h1, h5 {
 .splash-enter {
   border-radius: 8px;
   border: 2px solid $white;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   color: white;
-  width: 150px;
   line-height: 40px;
   background-color: $orange;
 
   display: block;
   margin: 0 auto;
   margin-top: 75px;
-  width: 175px;
+  width: 200px;
 }
 
 .splash-enter:hover {
@@ -86,7 +85,7 @@ h1, h5 {
 .tagline {
   z-index: 5;
   color: $orange;
-  font-size: 48px;
+  font-size: 65px;
   margin: 0 auto;
   margin-top: 175px;
   top: 25%;
