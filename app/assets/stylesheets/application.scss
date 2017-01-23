@@ -113,6 +113,7 @@ h1, h5 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  font-size: 18px;
 }
 
 .login-input {
@@ -124,7 +125,7 @@ h1, h5 {
 
 .login-form-box {
   border-radius: 10px;
-  padding: 20px;
+  padding: 30px;
   background-color: rgba(51, 51, 51, 0.5);
   color: white;
   text-align: center;
@@ -140,6 +141,16 @@ h1, h5 {
 
 .form-title {
   text-align: center;
+  font-size: 28px;
+}
+
+.form-welcome {
+  font-size: 22px;
+  margin-top: 0px;
+}
+
+.switch-entry:hover {
+  color: $orange;
 }
 
 .filter {
