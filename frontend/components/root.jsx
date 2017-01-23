@@ -11,7 +11,7 @@ import TrackShowContainer from './tracks/track_show_container';
 import UserShowContainer from './users/user_show_container';
 
 import { fetchTracks } from '../actions/track_actions';
-import { fetchUser } from '../actions/user_actions';
+import { fetchUser, fetchUsers } from '../actions/user_actions';
 
 const Root = ({ store }) => {
 
@@ -37,6 +37,10 @@ const Root = ({ store }) => {
     store.dispatch(fetchUser(nextState.params.userId));
   };
 
+  const _requestUsers = (nextState, replace) => {
+    store.dispatch(fetchUsers());
+  };
+
   return (
     <Provider store={store}>
       <Router history={hashHistory}>
@@ -49,7 +53,7 @@ const Root = ({ store }) => {
           <IndexRoute component={TrackIndexContainer} onEnter={_requestTracks} />
           <Route path="/upload" component={TrackFormContainer} onEnter={_ensureLoggedIn} />
           <Route path="/tracks/:id" component={TrackShowContainer} onEnter={_requestTracks} />
-          <Route path="/users/:userId" component={UserShowContainer} onEnter={_requestUser}/>
+          <Route path="/users/:userId" component={UserShowContainer} onEnter={_requestUsers}/>
         </Route>
       </Router>
     </Provider>
