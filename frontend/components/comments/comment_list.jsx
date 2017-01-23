@@ -27,7 +27,7 @@ class CommentList extends React.Component {
         let commenter = users[comment.user_id];
         return (
           <li className="comment-list-item" key={index}>
-            <CommentItem body={comment.body} commenter={commenter}/>
+            <CommentItem body={comment.body} commenter={commenter} createdAt={comment.created_at}/>
           </li>
         );
       });

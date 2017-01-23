@@ -652,12 +652,25 @@ box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
 .comment-item-photo {
+  background-color: $azure;
   height: 35px;
   width: 35px;
   border: 1px solid $gray;
+
+  background: -webkit-linear-gradient(left top, $azure, $turquoise); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, $azure, $turquoise); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, $azure, $turquoise); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, $azure, $turquoise); /* Standard syntax */
 }
 .comment-item-text {
   margin: 0 20px;
+  width: 100%;
+}
+
+.username-timeago {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .comment-item-username {
@@ -684,10 +697,10 @@ box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   padding: 40px;
   padding-top: 25px;
 
-  background: -webkit-linear-gradient(left top, $azure, $aquamarine); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, $azure, $aquamarine); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, $azure, $aquamarine); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to bottom right, $azure, $aquamarine); /* Standard syntax */
+  background: -webkit-linear-gradient(left top, $azure, $turquoise); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, $azure, $turquoise); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, $azure, $turquoise); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, $azure, $turquoise); /* Standard syntax */
 }
 
 .user-show-details {
