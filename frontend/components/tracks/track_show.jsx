@@ -12,7 +12,6 @@ class TrackShow extends React.Component {
 
   togglePlay(e) {
     e.stopPropagation();
-    console.log('play clicked');
     const showTrack = this.props.tracks[this.props.trackId];
     if (showTrack.id === this.props.currentTrack.id) {
       this.props.playing ? this.props.pauseTrack() : this.props.playTrack(this.props.tracks[this.props.trackId]);

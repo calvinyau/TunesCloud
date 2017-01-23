@@ -37,7 +37,6 @@ const CommentItem = ({ body, commenter, createdAt }) => {
     username = commenter.username;
     commenterUrl = `/users/${commenter.id}`;
   }
-  console.log(new Date(createdAt));
   return (
     <div className="comment-item">
       <img src={photo} className="comment-item-photo"/>
