@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const Splash = (store) => (
   <div className="splash">
     <div className="tagline">
-      <span>Cirrusly good music.</span>
+      <span>cirrusly good music.</span>
     </div>
     <button className="splash-enter"><Link to="/login">Enter the Cloud</Link></button>
   </div>
