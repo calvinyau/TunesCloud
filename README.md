@@ -1,7 +1,7 @@
 # TunesCloud
 
 [TunesCloud Live][sitelink]
-[sitelink]: https://tunescloud.herokuapp.com
+[sitelink]: https://tunescloud.stream
 
 TunesCloud is a music streaming web application inspired by SoundCloud. Users can create an account to upload tracks, listen to their own as well as other users' content and leave their thoughts.
 

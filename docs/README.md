@@ -1,7 +1,7 @@
 # TunesCloud
 
 [Heroku Link][herokulink]
-[herokulink]: https://tunescloud.herokuapp.com
+[herokulink]: https://tunescloud.stream
 
 [Trello Link][trellolink]
 [trellolink]: https://trello.com/b/2jRddFJq/tunescloud

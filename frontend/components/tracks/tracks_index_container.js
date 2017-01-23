@@ -3,8 +3,8 @@ import TrackIndex from './tracks_index';
 import { selectAllTracks } from '../../reducers/selectors';
 
 
-const mapStateToProps = (state) => ({
-  tracks: selectAllTracks(state)
+const mapStateToProps = (state, ownProps) => ({
+  tracks: ownProps.tracks || selectAllTracks(state)
 });
 
 const mapDispatchToProps = (dispatch) => {

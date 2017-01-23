@@ -1,8 +1,31 @@
 import React from 'react';
+import TracksIndexContainer from '../tracks/tracks_index_container';
 
 class UserShow extends React.Component {
   constructor(props) {
     super(props);
+
+    this.userTracks = this.userTracks.bind(this);
+    this.isUserTrack = this.isUserTrack.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.fetchTracks();
+  }
+
+  isUserTrack(key) {
+    return this.props.tracks[key].user_id === parseInt(this.props.userId);
+  }
+
+  userTracks() {
+    let myTracks = [];
+    if (this.props.tracks) {
+      const keys = Object.keys(this.props.tracks).filter(this.isUserTrack);
+      myTracks = keys.map((key) => (
+        this.props.tracks[key]
+      ))
+    }
+    return myTracks;
   }
 
   render() {
@@ -23,6 +46,9 @@ class UserShow extends React.Component {
             </div>
             <img className="user-show-pf-photo" src={pf_photo_url} />
           </div>
+        </div>
+        <div className="user-tracks">
+          <TracksIndexContainer tracks={this.userTracks()}/>
         </div>
       </div>
     );
