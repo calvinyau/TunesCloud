@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, hashHistory} from 'react-router';
 
+import Wavesurfer from 'react-wavesurfer';
+
 class TrackItem extends React.Component {
   constructor(props) {
     super(props);
@@ -53,6 +55,12 @@ class TrackItem extends React.Component {
                 {trackItem.name}
               </Link>
             </span>
+            {/*
+              <Wavesurfer
+              audioFile={this.props.track.track_url}
+              pos={}
+              />
+            */}
           </div>
         </div>
       </div>
