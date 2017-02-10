@@ -17,10 +17,23 @@
 @import "base/grid.scss";
 @import "base/colors.scss";
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   background: $lighter-gray;
   color: $gray;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.react-root {
+  height: 100%;
 }
 
 .content {
@@ -77,6 +90,7 @@ h1, h5 {
 
 .body-container {
   overflow: auto;
+  min-height: 100%;
   height: 100%;
   background-image: url("http://res.cloudinary.com/dsvfpq1b7/image/upload/q_auto:low/v1485088253/concert-slower_lkerjn.gif");
   background-size: cover;
