@@ -83,16 +83,16 @@ h1, h5 {
 }
 
 .splash-enter:hover {
-  border: 2px solid $gray;
-  color: $gray;
-  // color: transparent;
+  border: 2px solid $orange;
+  color: $orange;
+  background-color: white;
 }
 
 .body-container {
   overflow: auto;
   min-height: 100%;
   height: 100%;
-  background-image: url("http://res.cloudinary.com/dsvfpq1b7/image/upload/q_auto:low/v1485088253/concert-slower_lkerjn.gif");
+  background-image: url("http://res.cloudinary.com/dsvfpq1b7/image/upload/v1486761840/concert-slower-opt_isvenm.gif");
   background-size: cover;
 }
 
