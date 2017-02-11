@@ -19,10 +19,13 @@
 
 .clearfix:after {
   content: ".";
-  display: inline-block;
   height: 0;
   clear: both;
   visibility: hidden;
+}
+
+.clearfix {
+  display: inline-block;
 }
 
 html {
@@ -38,11 +41,14 @@ body {
 
 #root {
   height: 100%;
-  display: block;
+  display: inline-block;
+  width: 100%;
 }
 
 .react-root {
   height: 100%;
+  width: 100%;
+  // display: inline-block;
 }
 
 .content {
@@ -53,13 +59,24 @@ header {
   margin-left: 5%;
 }
 
-footer {
+.content-area {
+  width: 1230px;
+  min-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  background: white;
+  min-height: 800px;
+  // display: inline-block;
+  display: block;
+}
+
+#footer {
     position: block;
-    margin-top: -150px;  /* negative value of footer height */
+    // margin-top: -150px;  /* negative value of footer height */
+    margin-top: 60px;
     height: 150px;
     clear: both;
     background-color: $gray;
-
 }
 
 h1, h5 {
@@ -124,15 +141,6 @@ h1, h5 {
   top: 25%;
   text-align: center;
   width: 100%;
-}
-
-.content-area {
-  width: 1230px;
-  min-width: 800px;
-  margin: 0 auto;
-  padding-bottom: 60px;
-  background: white;
-  min-height: 800px;
 }
 
 .login-form-container {
