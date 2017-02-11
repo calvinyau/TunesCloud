@@ -5,7 +5,7 @@ import PlayerContainer from './player/player_container';
 const LoggedInApp = ({children}) => (
   <div>
     <NavigationBarContainer />
-    <div className="content-area clearfix">
+    <div className="content-area">
       { children }
     </div>
     <PlayerContainer />

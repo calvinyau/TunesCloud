@@ -19,7 +19,7 @@
 
 .clearfix:after {
   content: ".";
-  display: block;
+  display: inline-block;
   height: 0;
   clear: both;
   visibility: hidden;
@@ -38,6 +38,7 @@ body {
 
 #root {
   height: 100%;
+  display: block;
 }
 
 .react-root {
@@ -50,6 +51,15 @@ body {
 
 header {
   margin-left: 5%;
+}
+
+footer {
+    position: block;
+    margin-top: -150px;  /* negative value of footer height */
+    height: 150px;
+    clear: both;
+    background-color: $gray;
+
 }
 
 h1, h5 {

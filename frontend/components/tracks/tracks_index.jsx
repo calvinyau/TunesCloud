@@ -25,7 +25,7 @@ class TracksIndex extends React.Component {
           <h2 className="selected-index">Tracks</h2>
           {/* <h2><Link to="/home/users" className="index-link">Users</Link></h2> */}
         </div>
-        <ul className="track-index-list">
+        <ul className="track-index-list clearfix">
           {tracks}
         </ul>
       </div>
