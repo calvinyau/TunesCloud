@@ -70,15 +70,13 @@ header {
 }
 
 #footer {
-    position: block;
+    position: relative;
     margin: 0 auto;
     height: 50px;
     clear: both;
     background-color: $orange;
-    width: 1230px;
     min-width: 800px;
     color: white;
-    // margin-top: -4px;
     width: 100%;
 }
 
