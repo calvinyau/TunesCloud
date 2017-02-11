@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-guestAccount = User.create({username: "Demo", password: "123456", email:"demo@demo.com", profile_photo_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png"})
+guestAccount = User.create({username: "Demo User", password: "123456", email:"demo@demo.com", profile_photo_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484767547/cloud_avatar_d2msjo.png"})
 
 
 
@@ -77,16 +77,14 @@ track19 = Track.create({name: "Sia - Chandelier", track_url: "http://res.cloudin
   artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484948916/Sia_Chandelier_xbsvkv.png", user_id: (Random.rand(26) + 1)})
 track20 = Track.create({name: "The Neighborhood - Sweater Weather", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1484942395/Tracks/The_Neighbourhood_-_Sweater_Weather.mp3",
   artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484949102/sweater_weather_artwork_upgevb.jpg", user_id: (Random.rand(26) + 1)})
-  track17 = Track.create({name: "OneRepublic - Feel Again", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1484942130/Tracks/OneRepublic_-_Feel_Again.mp3",
+track17 = Track.create({name: "OneRepublic - Feel Again", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1484942130/Tracks/OneRepublic_-_Feel_Again.mp3",
     artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484948837/onerepublic_feel_again_artwork_cyjchn.png", user_id: (Random.rand(26) + 1)})
 track10 = Track.create({name: "American Authors - Believer", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1484942127/Tracks/American_Authors_-_Believer.mp3",
   artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484943369/American_Authors_Believer_artwork_mxszzl.jpg", user_id: (Random.rand(26) + 1)})
 track21 = Track.create({name: "Daft Punk - Give Life Back to Music", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1484788011/Give_Life_Back_to_Music_rwqv9n.mp3",
   artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484788177/Random_Access_Memories_izpzws.jpg", user_id: (Random.rand(26) + 1)})
-# track21 = Track.create({name: "", track_url: "",
-#   artwork_url: "", user_id: (Random.rand(26) + 1)})
-# track22 = Track.create({name: "", track_url: "",
-#   artwork_url: "", user_id: (Random.rand(26) + 1)})
+track22 = Track.create({name: "Flume - Say It ft. Tove Lo (Illenium Remix)", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1486825283/Flume_-_Say_It_ft._Tove_Lo_Illenium_Remix_tnwamn.mp3",
+  artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/c_scale,w_200/v1486825265/Flume-Say-It-Illenium-Remix-Cover_khaayo.jpg", user_id: (Random.rand(26) + 1)})
 # track23 = Track.create({name: "", track_url: "",
 #   artwork_url: "", user_id: (Random.rand(26) + 1)})
 # track24 = Track.create({name: "", track_url: "",
@@ -98,6 +96,6 @@ track21 = Track.create({name: "Daft Punk - Give Life Back to Music", track_url: 
   comment = Comment.create({
       body: quote,
       user_id: Random.rand(26) + 1,
-      track_id: Random.rand(21) + 1
+      track_id: Random.rand(22) + 1
     })
 end
