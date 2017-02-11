@@ -322,7 +322,9 @@ hr {
 }
 
 .demo-button:hover {
-  color: $light-gray;
+  color: $orange;
+  background: white;
+  border: 1px solid $orange;
 }
 
 .navbar-user-container {
