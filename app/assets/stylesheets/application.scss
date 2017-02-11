@@ -290,16 +290,29 @@ hr {
 
 
 // Indexes
+.track-index {
+  margin: 0 15px;
+  padding-top: 40px;
+  width: 1200px;
+}
+
+// for splitting into 2 columns
+.index-item {
+  display: inline;
+}
+
+.index-item {
+  width: 500px;
+}
+
+.track-item {
+  width: 600px;
+  float: left;
+}
+
 .track-item-artwork {
   width: 200px;
   height: 200px;
-}
-
-.track-index {
-  // padding: 40px;
-  margin: 0 auto;
-  padding-top: 40px;
-  width: 600px;
 }
 
 .track-user-nav {
