@@ -71,11 +71,10 @@ header {
 
 #footer {
     position: block;
-    // margin-top: -150px;  /* negative value of footer height */
     margin: 0 auto;
     height: 50px;
     clear: both;
-    background-color: $gray;
+    background-color: $orange;
     width: 1230px;
     min-width: 800px;
     color: white;
@@ -101,6 +100,15 @@ header {
 .created-by {
   margin: auto 0;
   margin-right: 50px;
+}
+
+.footer-contents .footer-social a i {
+  // color: #ffc57f;
+  color: #ffd199;
+}
+
+.footer-contents .footer-social a i:hover {
+  color: white;
 }
 
 
