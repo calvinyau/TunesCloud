@@ -436,15 +436,14 @@ hr {
   margin: 0 auto;
   width: 1150px;
   padding: 15px 25px;
-  // display: block;
-  // flex-direction: row;
-  // justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .react-player-container {
   margin: 0 50px;
   width: 500px;
-  // display: absolute;
 }
 
 .playbar {
