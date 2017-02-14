@@ -8,7 +8,7 @@ const LoggedInApp = ({children}) => (
     <div className="content-area clearfix">
       { children }
     </div>
-    <PlayerContainer />
+    <PlayerContainer/>
   </div>
 );
 

@@ -11,6 +11,7 @@ class Player extends React.Component {
       played: 0,
       playing: this.props.playing
     }
+
     this.onSeekMouseDown = this.onSeekMouseDown.bind(this);
     this.onSeekChange = this.onSeekChange.bind(this);
     this.onSeekMouseUp = this.onSeekMouseUp.bind(this);
@@ -18,6 +19,8 @@ class Player extends React.Component {
     this.togglePlay = this.togglePlay.bind(this);
     this.getElapsed = this.getElapsed.bind(this);
     this.getTrackDuration = this.getTrackDuration.bind(this);
+    this.handleBack = this.handleBack.bind(this);
+    this.handleForward = this.handleForward.bind(this);
   }
 
   onSeekMouseDown(e) {
@@ -45,6 +48,14 @@ class Player extends React.Component {
     if (this.props.track.id) {
       this.props.playing ? this.props.pauseTrack() : this.props.playTrack(this.props.track);
     }
+  }
+
+  handleBack(e) {
+    this.props.playTrack(this.props.playlist[this.props.track.id + 1]);
+  }
+
+  handleForward(e) {
+    this.props.playTrack(this.props.playlist[this.props.track.id - 1]);
   }
 
   getElapsed() {
@@ -79,9 +90,9 @@ class Player extends React.Component {
       <div className="playbar" style={playbarDisplayStyle}>
         <div className="playbar-elements-container">
           <div className="play-controls">
-            <button className="prev-button"></button>
+            <button className="prev-button" onClick={this.handleBack}></button>
             <button className="play-pause-button" style={playPauseStyle}  onClick={this.togglePlay}></button>
-            <button className="next-button"></button>
+            <button className="next-button" onClick={this.handleForward}></button>
           </div>
           {/*<progress max="1" value={this.state.played}></progress>*/}
           <div className="react-player-container">
