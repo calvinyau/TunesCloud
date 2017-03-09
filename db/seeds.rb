@@ -83,7 +83,7 @@ track10 = Track.create({name: "American Authors - Believer", track_url: "http://
   artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484943369/American_Authors_Believer_artwork_mxszzl.jpg", user_id: (Random.rand(26) + 1)})
 track21 = Track.create({name: "Daft Punk - Give Life Back to Music", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1484788011/Give_Life_Back_to_Music_rwqv9n.mp3",
   artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/v1484788177/Random_Access_Memories_izpzws.jpg", user_id: (Random.rand(26) + 1)})
-track22 = Track.create({name: "Flume - Say It ft. Tove Lo (Illenium Remix)", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1486825283/Flume_-_Say_It_ft._Tove_Lo_Illenium_Remix_tnwamn.mp3",
+track22 = Track.create({name: "Flume - Say It ft. Tove Lo (Illenium Remix)", track_url: "http://res.cloudinary.com/dsvfpq1b7/video/upload/v1489099216/Rick_Astley_-_Never_Gonna_Give_You_Up_dg5bjs.mp3",
   artwork_url: "http://res.cloudinary.com/dsvfpq1b7/image/upload/c_scale,w_200/v1486825265/Flume-Say-It-Illenium-Remix-Cover_khaayo.jpg", user_id: (Random.rand(26) + 1)})
 # track23 = Track.create({name: "", track_url: "",
 #   artwork_url: "", user_id: (Random.rand(26) + 1)})
